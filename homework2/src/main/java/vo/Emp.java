@@ -29,7 +29,9 @@ public class Emp {
 
   @Override
   public String toString() {
-    return "Emp [ id=" + id + ", name=" + name + ", job=" + job + ", mid=" + mid + ", date=" + date
+    return "Employee [ id=" + id + ", name=" + name + ", job=" + job + ", mid=" + mid
+        + ", date="
+        + date
         + ", salary=" + salary + ", commission=" + commission + ", did=" + did + " ]";
   }
 

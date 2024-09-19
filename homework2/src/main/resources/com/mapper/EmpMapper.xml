@@ -5,12 +5,72 @@
 
 <!-- 解决命名不对称 -->
 
+
 <!-- 文件路径 -->
 <mapper namespace="com.mapper.EmpMapper">
+  <resultMap id="EmpResultMap" type="vo.Emp">
+    <result property="id" column="empno"/>
+    <result property="name" column="ename"/>
+    <result property="job" column="job"/>
+    <result property="mid" column="mgr"/>
+    <result property="date" column="hiredate"/>
+    <result property="salary" column="sal"/>
+    <result property="commission" column="comm"/>
+    <result property="did" column="deptno"/>
+  </resultMap>
 
   <select id="selectAllEmp" resultType="vo.Emp">
-    select eid id, ename name,job,mgr mid,hiredate date,sal salary,comm commission,deptno did from
-    emp
+    select empno id, ename name, job, mgr mid, hiredate date, sal salary, comm commission, deptno
+    did from emp
   </select>
 
+  <!-- 选择部门30中的雇员 -->
+  <select id="selectEmpByDeptno" resultType="vo.Emp" parameterType="int">
+    select * from emp where deptno = #{did}
+  </select>
+
+  <!-- 检索emp表中的员工姓名、月收入及部门编号 -->
+  <select id="selectEmpNameSalDeptno" resultType="vo.Emp">
+    select ename name, sal salary, deptno date from emp
+  </select>
+
+  <!-- 检索emp表中员工姓名、及雇佣时间 -->
+  <select id="selectEmpNameHiredate" resultType="vo.Emp">
+    select ename name, hiredate date from emp
+  </select>
+
+  <!-- 检索emp表中的部门编号及工种，并去掉重复行 -->
+  <select id="selectDeptnoJob" resultType="map">
+    select * from emp
+  </select>
+
+  <!--  检索emp表中的员工姓名及全年的月收入 -->
+  <select id="selectEmpNameSal" resultType="vo.Emp">
+    select ename name, sal*12 salary from emp
+  </select>
+
+  <!--  用姓名显示员工姓名，用年收入显示全年月收入-->
+  <select id="selectEmpNameSal2" resultType="vo.Emp">
+    select ename name, sal*12 salary from emp
+  </select>
+
+  <!--  检索月收入大于2000的员工姓名及月收入 -->
+  <select id="selectEmpNameSal3" resultType="vo.Emp">
+    select ename name, sal salary from emp where sal > 2000
+  </select>
+
+  <!--  检索月收入在1000元到2000元的员工姓名、月收入及雇佣时间-->
+  <select id="selectEmpNameSalHiredate" resultType="vo.Emp">
+    select ename name, sal salary, hiredate date from emp where sal between 1000 and 2000
+  </select>
+
+  <!--  检索以S开头的员工姓名及月收入-->
+  <select id="selectEmpNameSal4" resultType="vo.Emp">
+    select ename name, sal salary from emp where ename like 'S%'
+  </select>
+
+  <!--  检索emp表中月收入是800的或是1250的员工姓名及部门编号-->
+  <select id="selectEmpNameDeptno" resultType="vo.Emp">
+    select ename name, deptno did from emp where sal in (800, 1250)
+  </select>
 </mapper>
