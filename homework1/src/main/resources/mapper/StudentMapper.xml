@@ -11,5 +11,5 @@
   <select id="selectAllStudent" resultType="Student">
     select id sid ,sname ,sex , age from student
   </select>
-  <!-- test -->
+<!-- test -->
 </mapper>
