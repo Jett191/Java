@@ -19,7 +19,7 @@ public class Student {
 
   @Override
   public String toString() {
-    return "Student [sid=" + sid + ",age=" + age + ",sname=" + sname + ",sex=" + sex;
+    return "Student [sid=" + sid + ",age=" + age + ",sname=" + sname + ",sex=" + sex + "]";
   }
 
   public Integer getSid() {

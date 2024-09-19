@@ -6,10 +6,10 @@
 <!-- 解决命名不对称 -->
 
 <!-- 文件路径 -->
-<mapper namespace="org.mybatis.StudentMapper">
+<mapper namespace="com.mapper.StudentMapper">
 
-  <select id="selectAllStudent" resultType="Student">
-    select id sid ,sname ,sex , age from student
+  <select id="selectAllStudents" resultType="vo.Student">
+    select id sid ,sname ,sex , age from students
   </select>
-<!-- test -->
+
 </mapper>
