@@ -12,6 +12,7 @@
   <!-- 配置别名 -->
   <typeAliases>
     <typeAlias type="vo.Student" alias="Student"/>
+    <typeAlias type="vo.Stu" alias="Stu"/>
   </typeAliases>
 
   <!-- 配置数据库 -->

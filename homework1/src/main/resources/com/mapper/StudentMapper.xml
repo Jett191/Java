@@ -12,4 +12,22 @@
     select id sid ,sname ,sex , age from students
   </select>
 
+  <select id="selectAllStu" resultType="vo.Stu">
+    select id sssid , age sssage , sname sssname,
+    sex sssex,age+100 mm from students
+  </select>
+
+  <select id="selectCount" resultType="int">
+    select count(*) from students
+  </select>
+
+  <select id="selectStuById" resultType="vo.Student" parameterType="Student">
+    select * from students where id = #{id}
+  </select>
+
+  <select id="selectStuById2" resultType="vo.Student" parameterType="Stu">
+    select * from students where id = #{id} or sname = #{sname}
+  </select>
+
+
 </mapper>
