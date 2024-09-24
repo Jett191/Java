@@ -10,10 +10,9 @@
   </settings>
 
   <!-- 配置别名 -->
-<!--  <typeAliases>-->
-<!--    <typeAlias type="vo.Student" alias="Student"/>-->
-<!--    <typeAlias type="vo.Stu" alias="Stu"/>-->
-<!--  </typeAliases>-->
+  <typeAliases>
+    <typeAlias type="vo.Student" alias="Student"/>
+  </typeAliases>
 
   <!-- 配置数据库 -->
   <environments default="default">
@@ -29,8 +28,8 @@
   </environments>
 
   <!-- 配置映射文件 -->
-<!--  <mappers>-->
-<!--    <mapper resource="com/mapper/StudentMapper.xml"/>-->
-<!--  </mappers>-->
+  <mappers>
+    <mapper resource="mapper/IStudent.xml"/>
+  </mappers>
 
 </configuration>

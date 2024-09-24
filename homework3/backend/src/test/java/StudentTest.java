@@ -42,7 +42,7 @@ public class StudentTest {
       iStudent=session.getMapper(IStudent.class);
       list = iStudent.selectStudent();
       for (Student u : list) {
-        System.out.println(u);
+        System.out.println(u.toString());
       }
     }
   }
