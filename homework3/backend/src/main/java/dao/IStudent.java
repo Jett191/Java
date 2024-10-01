@@ -1,10 +1,11 @@
 package dao;
 
-import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.session.RowBounds;
 import vo.Student;
+import java.util.List;
 
+@Mapper
 public interface IStudent {
-
-  public List<Student> selectStudent();
-
+  List<Student> selectStudent(RowBounds rowBounds);
 }

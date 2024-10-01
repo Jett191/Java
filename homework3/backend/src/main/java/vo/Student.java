@@ -4,13 +4,14 @@ public class Student {
 
   private Integer id, age, java, android, javaee, total;
   private String name;
+  private byte[] photo;
 
   public Student() {
 
   }
 
   public Student(Integer id, Integer age, Integer java, Integer android, Integer javaee,
-      Integer total, String name) {
+      Integer total, String name, byte[] photo) {
     super();
     this.id = id;
     this.age = age;
@@ -75,6 +76,14 @@ public class Student {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public byte[] getPhoto() {
+    return photo;
+  }
+
+  public void setPhoto(byte[] photo) {
+    this.photo = photo;
   }
 
   @Override

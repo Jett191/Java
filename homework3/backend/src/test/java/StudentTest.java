@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -39,11 +40,16 @@ public class StudentTest {
   @Test
   public void testSelectUser() {
     if (session != null) {
-      iStudent=session.getMapper(IStudent.class);
-      list = iStudent.selectStudent();
-      for (Student u : list) {
-        System.out.println(u.toString());
+      iStudent = session.getMapper(IStudent.class); //装载接口
+      // 创建 RowBounds 对象，这里设置偏移量为0，页面大小为10
+      RowBounds rowBounds = new RowBounds(0, 10);
+      list = iStudent.selectStudent(rowBounds);
+      for (Student s : list) {
+        System.out.println(s.toString());
       }
     }
   }
 }
+
+
+

@@ -5,9 +5,9 @@
 
 <configuration>
 
-  <settings>
-    <setting name="logImpl" value="LOG4J"/>
-  </settings>
+<!--  <settings>-->
+<!--    <setting name="logImpl" value="LOG4J"/> -->
+<!--  </settings>-->
 
   <!-- 配置别名 -->
   <typeAliases>
@@ -29,7 +29,7 @@
 
   <!-- 配置映射文件 -->
   <mappers>
-    <mapper resource="mapper/IStudent.xml"/>
+    <package name="dao"/>
   </mappers>
 
 </configuration>
