@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { getStudents } from './api/services/examService'
-import { StudentsData, Student } from './api/types/types'
+import React, { useState, useEffect } from 'react'
+import { getAllStudents, getStudent } from './api/services/examService'
+import { StudentsData, Student } from '@/app/types/types'
 import Image from 'next/image'
 import SearchPanel from '../components/SearchPanel'
 
@@ -27,17 +27,32 @@ function Home() {
         page: page,
         pageSize: 10
       }
-      const data = await getStudents(params)
-      // 处理照片数据
+      const data = await getAllStudents(params)
       const studentsWithPhotoUrls = data.students.map((student: Student) => ({
         ...student,
         photoUrl: `data:image/jpeg;base64,${student.photo}`
       }))
       setStudents(studentsWithPhotoUrls)
       setCurrentPage(data.page)
-      setTotalPages(10) // 假设 API 返回总页数
+      setTotalPages(10)
     } catch (error) {
       console.error('获取学生数据失败:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleSearch = async () => {
+    setLoading(true)
+    try {
+      const data = await getStudent(searchCriteria)
+      const studentsWithPhotoUrls = data.students.map((student: Student) => ({
+        ...student,
+        photoUrl: `data:image/jpeg;base64,${student.photo}`
+      }))
+      setStudents(studentsWithPhotoUrls)
+    } catch (error) {
+      console.error('查询学生数据失败:', error)
     } finally {
       setLoading(false)
     }
@@ -64,23 +79,15 @@ function Home() {
     setSearchCriteria((prev) => ({ ...prev, [name]: value }))
   }
 
-  const filteredStudents = students.filter((student) => {
-    return (
-      (searchCriteria.id === '' || student.id.toString().includes(searchCriteria.id)) &&
-      (searchCriteria.name === '' || student.name.includes(searchCriteria.name)) &&
-      (searchCriteria.grade === '' || student.grade.toString() === searchCriteria.grade) &&
-      (searchCriteria.java === '' || student.java.toString().includes(searchCriteria.java)) &&
-      (searchCriteria.android === '' ||
-        student.android.toString().includes(searchCriteria.android)) &&
-      (searchCriteria.javaee === '' || student.javaee.toString().includes(searchCriteria.javaee))
-    )
-  })
-
   return (
     <div className='container mx-auto h-screen max-w-5xl bg-white p-6 shadow-lg'>
       <h1 className='mb-12 mt-8 text-center text-3xl font-bold text-gray-800'>学生成绩查询</h1>
 
-      <SearchPanel searchCriteria={searchCriteria} onSearchChange={handleSearchChange} />
+      <SearchPanel
+        searchCriteria={searchCriteria}
+        onSearchChange={handleSearchChange}
+        onSearch={handleSearch}
+      />
 
       {loading ? (
         <p className='text-center text-gray-600'>加载中...</p>
@@ -100,8 +107,9 @@ function Home() {
                   <th className='p-2 text-left text-gray-700'>总分</th>
                 </tr>
               </thead>
+
               <tbody>
-                {filteredStudents.map((student) => (
+                {students.map((student) => (
                   <tr key={student.id} className='table-row hover:bg-gray-50'>
                     <td className='p-2'>
                       {student.photoUrl && (

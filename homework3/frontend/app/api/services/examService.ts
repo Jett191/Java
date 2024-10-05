@@ -1,7 +1,7 @@
 import axiosInstance from '@/app/api/client/axiosInstance'
-import { StudentsData } from '@/app/api/types/types'
+import { StudentsData, StudentSearchParams } from '@/app/types/types'
 
-export const getStudents = async (params: StudentsData) => {
+export const getAllStudents = async (params: StudentsData) => {
   try {
     const response = await axiosInstance.get('/students', { params })
     return {
@@ -9,6 +9,16 @@ export const getStudents = async (params: StudentsData) => {
       page: response.data.currentPage,
       pageSize: response.data.pageSize
     }
+  } catch (error) {
+    console.error('获取学生信息失败:', error)
+    throw error
+  }
+}
+
+export const getStudent = async (params: StudentSearchParams) => {
+  try {
+    const response = await axiosInstance.get('/search', { params })
+    return response.data
   } catch (error) {
     console.error('获取学生信息失败:', error)
     throw error

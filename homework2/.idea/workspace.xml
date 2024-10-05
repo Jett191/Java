@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3a5c626-bec2-4270-bbbd-2016f6b13ad2" name="更改" comment="update" />
+    <list default="true" id="a3a5c626-bec2-4270-bbbd-2016f6b13ad2" name="更改" comment="update">
+      <change afterPath="$PROJECT_DIR$/../homework3/backend/src/main/resources/dao/IStudent.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework3/backend/src/main/resources/mapper/IStudent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework3/backend/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homework3/backend/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework3/backend/src/test/java/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homework3/backend/src/test/java/StudentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework3/backend/target/classes/mapper/IStudent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework3/backend/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homework3/backend/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework3/backend/target/test-classes/StudentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homework3/backend/target/test-classes/StudentTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework3/frontend/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../homework3/frontend/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework3/frontend/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../homework3/frontend/app/page.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +81,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jett/code/School/spring/homework2/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jett/code/School/Java/homework2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -191,6 +201,9 @@
       <updated>1726768597941</updated>
       <workItem from="1726768598854" duration="13891000" />
       <workItem from="1727074001191" duration="52000" />
+      <workItem from="1727178477357" duration="828000" />
+      <workItem from="1727590419594" duration="627000" />
+      <workItem from="1727591432463" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
