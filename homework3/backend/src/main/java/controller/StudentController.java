@@ -23,17 +23,9 @@ public class StudentController {
       @RequestParam(defaultValue = "10") int pageSize) {
     // Calculate offset
     int offset = (currentPage - 1) * pageSize;
-    
-
     RowBounds rowBounds = new RowBounds(offset, pageSize);
-    
-
-    List<Student> pagedStudents = studentDao.selectStudent(rowBounds);
-    
-
-    int totalStudents = studentDao.selectStudent(new RowBounds()).size();
-
-
+    List<Student> pagedStudents = studentDao.selectAllStudent(rowBounds);
+    int totalStudents = studentDao.selectAllStudent(new RowBounds()).size();
     int totalPages = (int) Math.ceil((double) totalStudents / pageSize);
 
     Map<String, Object> response = new HashMap<>();
@@ -44,5 +36,24 @@ public class StudentController {
     response.put("totalItems", totalStudents);
 
     return response;
+  }
+
+  // 添加动态查询接口
+  @GetMapping("/search")
+  public List<Student> searchStudents(
+      @RequestParam(required = false) Integer id,
+      @RequestParam(required = false) String name,
+      @RequestParam(required = false) Integer java,
+      @RequestParam(required = false) Integer android,
+      @RequestParam(required = false) Integer javaee) {
+
+    Map<String, Object> params = new HashMap<>();
+    if (id != null) params.put("id", id);
+    if (name != null && !name.isEmpty()) params.put("name", name);
+    if (java != null) params.put("java", java);
+    if (android != null) params.put("android", android);
+    if (javaee != null) params.put("javaee", javaee);
+
+    return studentDao.selectStudent(params);
   }
 }

@@ -5,8 +5,31 @@
 
 <mapper namespace="dao.IStudent">
 
-  <select id="selectStudent" resultType="Student">
+  <select id="selectAllStudent" resultType="Student">
     select * from student
   </select>
+
+  <select id="selectStudent" parameterType="map" resultType="Student">
+    select * from student
+    <where>
+      <if test="id != null">
+        and id = #{id}
+      </if>
+      <if test="java != null">
+        and java = #{java}
+      </if>
+      <if test="android != null">
+        and android = #{android}
+      </if>
+      <if test="javaee != null">
+        and javaee = #{javaee}
+      </if>
+      <if test="name != null and name != ''">
+        and name = #{name}
+      </if>
+    </where>
+  </select>
+
+
 
 </mapper>

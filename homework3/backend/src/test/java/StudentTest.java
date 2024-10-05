@@ -43,7 +43,7 @@ public class StudentTest {
       iStudent = session.getMapper(IStudent.class); //装载接口
       // 创建 RowBounds 对象，这里设置偏移量为0，页面大小为10
       RowBounds rowBounds = new RowBounds(0, 10);
-      list = iStudent.selectStudent(rowBounds);
+      list = iStudent.selectAllStudent(rowBounds);
       for (Student s : list) {
         System.out.println(s.toString());
       }
