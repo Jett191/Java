@@ -11,7 +11,7 @@
 
   <!-- 配置别名 -->
   <typeAliases>
-    <typeAlias type="vo.Emp" alias="Emp"/>
+    <typeAlias type="vo.Employee" alias="Emp"/>
   </typeAliases>
 
   <!-- 配置数据库 -->
@@ -29,7 +29,7 @@
 
   <!-- 配置映射文件 -->
   <mappers>
-    <mapper resource="com/mapper/EmpMapper.xml"/>
+    <package name="com.dao"/>
   </mappers>
 
 </configuration>

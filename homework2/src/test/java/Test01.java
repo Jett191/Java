@@ -4,7 +4,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import vo.Emp;
+import vo.Employee;
 
 public class Test01 {
 
@@ -15,8 +15,8 @@ public class Test01 {
     SqlSession session = factory.openSession();
 
     // 从mapper中获取数据 读取sql语句
-    List<Emp> list = session.selectList("com.mapper.EmpMapper.selectAllEmp");
-    for (Emp employee : list) {
+    List<Employee> list = session.selectList("com.dao.mapper.EmpMapper.selectAllEmp");
+    for (Employee employee : list) {
       System.out.println(employee.toString());
     }
     session.close();
