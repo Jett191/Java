@@ -7,6 +7,9 @@ public class Project {
   private String date;
   private Integer budget;
 
+  private Employee employee;
+
+
   public Project() {
   }
 
@@ -53,5 +56,13 @@ public class Project {
 
   public void setBudget(Integer budget) {
     this.budget = budget;
+  }
+
+  public Employee getEmployee() {
+    return employee;
+  }
+
+  public void setEmployee(Employee employee) {
+    this.employee = employee;
   }
 }

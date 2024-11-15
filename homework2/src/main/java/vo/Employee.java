@@ -1,5 +1,7 @@
 package vo;
 
+import java.util.List;
+
 public class Employee {
 
   private Integer id;
@@ -8,6 +10,10 @@ public class Employee {
   private String date;
   private Integer salary;
   private Integer did;
+
+  private Department department;
+  private List<Project> projects;
+
 
   public Employee() {
   }
@@ -75,5 +81,21 @@ public class Employee {
 
   public void setDid(Integer did) {
     this.did = did;
+  }
+
+  public List<Project> getProjects() {
+    return projects;
+  }
+
+  public void setProjects(List<Project> projects) {
+    this.projects = projects;
+  }
+
+  public Department getDepartment() {
+    return department;
+  }
+
+  public void setDepartment(Department department) {
+    this.department = department;
   }
 }

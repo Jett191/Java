@@ -48,4 +48,12 @@ public class Department {
   public void setLocation(String location) {
     this.location = location;
   }
+
+  public List<Employee> getEmployees() {
+    return Employees;
+  }
+
+  public void setEmployees(List<Employee> employees) {
+    Employees = employees;
+  }
 }
