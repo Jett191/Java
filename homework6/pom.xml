@@ -47,6 +47,13 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- Spring MVC -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>6.2.1</version>
+    </dependency>
+
     <!-- Lombok 依赖 -->
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -75,7 +82,12 @@
       <version>5.3.1</version>
     </dependency>
 
-    <!-- MyBatis-Spring -->
+    <!-- MyBatis -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.5.7</version>
+    </dependency>
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis-spring</artifactId>
