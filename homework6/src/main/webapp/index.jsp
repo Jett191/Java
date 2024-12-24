@@ -33,6 +33,115 @@
             display: none;
             color: white;
         }
+        
+        /* 文件上传区域样式 */
+        .upload-container {
+            margin: 2rem auto;
+            max-width: 600px;
+            padding: 2rem;
+        }
+        
+        .upload-area {
+            border: 2px dashed #1976d2;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            background-color: #f8f9fa;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .upload-area.disabled {
+            border-color: #ccc;
+            background-color: #f5f5f5;
+            cursor: not-allowed;
+        }
+        
+        .upload-area:hover:not(.disabled), .upload-area.dragover:not(.disabled) {
+            background-color: #e3f2fd;
+            border-color: #1565c0;
+        }
+        
+        .upload-icon {
+            font-size: 3rem;
+            color: #1976d2;
+            margin-bottom: 1rem;
+        }
+        
+        .upload-text {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .upload-button {
+            background-color: #1976d2;
+            color: white;
+            padding: 0.5rem 2rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .upload-button:hover:not(:disabled) {
+            background-color: #1565c0;
+        }
+        
+        .upload-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .selected-file {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #e3f2fd;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .selected-file.show {
+            display: block;
+        }
+        
+        .upload-actions {
+            margin-top: 1rem;
+            display: none;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .upload-actions.show {
+            display: flex;
+        }
+        
+        .btn-upload {
+            background-color: #4caf50;
+            color: white;
+            padding: 0.5rem 2rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-upload:hover {
+            background-color: #45a049;
+        }
+        
+        .btn-cancel {
+            background-color: #f44336;
+            color: white;
+            padding: 0.5rem 2rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-cancel:hover {
+            background-color: #da190b;
+        }
     </style>
 </head>
 <body>
@@ -124,9 +233,63 @@
         </div>
     </div>
 
+    <!-- 文件上传区域 -->
+    <div class="upload-container">
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">
+                <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <div class="upload-text">
+                <h4 id="uploadText">拖拽文件到这里上传</h4>
+                <p id="uploadSubText">或者</p>
+            </div>
+            <button class="upload-button" id="selectButton" onclick="document.getElementById('fileInput').click()">
+                选择文件
+            </button>
+            <input type="file" id="fileInput" style="display: none">
+            <div class="selected-file" id="selectedFile">
+                <strong>已选择文件：</strong>
+                <span id="displayFileName"></span>
+            </div>
+            <div class="upload-actions" id="uploadActions">
+                <button class="btn-upload" id="uploadButton">
+                    <i class="fas fa-upload"></i> 上传文件
+                </button>
+                <button class="btn-cancel" id="cancelButton">
+                    <i class="fas fa-times"></i> 取消
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 重命名弹窗 -->
+    <div class="modal fade" id="renameModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">文件重命名</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="newFileName" class="form-label">新文件名</label>
+                        <input type="text" class="form-control" id="newFileName">
+                        <small class="text-muted">原文件名：<span id="originalFileName"></span></small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="confirmRename">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 引入脚本 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Font Awesome 图标 -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -280,6 +443,149 @@
                 logoutBtn.style.display = 'none';
                 usernameSpan.textContent = '';
             }
+        });
+        
+        // 文件上传相关代码
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const renameModal = new bootstrap.Modal(document.getElementById('renameModal'));
+        const selectButton = document.getElementById('selectButton');
+        const uploadText = document.getElementById('uploadText');
+        const uploadSubText = document.getElementById('uploadSubText');
+        const selectedFile = document.getElementById('selectedFile');
+        const displayFileName = document.getElementById('displayFileName');
+        const uploadActions = document.getElementById('uploadActions');
+        const uploadButton = document.getElementById('uploadButton');
+        const cancelButton = document.getElementById('cancelButton');
+        let currentFile = null;
+        let finalFileName = '';
+
+        // 阻止默认拖拽行为
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, preventDefaults, false);
+            document.body.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        // 添加拖拽效果
+        ['dragenter', 'dragover'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            if (!uploadArea.classList.contains('disabled')) {
+                uploadArea.classList.add('dragover');
+            }
+        }
+
+        function unhighlight(e) {
+            uploadArea.classList.remove('dragover');
+        }
+
+        // 处理文件选择
+        fileInput.addEventListener('change', handleFiles, false);
+        uploadArea.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            if (!uploadArea.classList.contains('disabled')) {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                if (files.length > 0) {
+                    handleFile(files[0]);
+                }
+            }
+        }
+
+        function handleFiles(e) {
+            if (!uploadArea.classList.contains('disabled')) {
+                const files = e.target.files;
+                if (files.length > 0) {
+                    handleFile(files[0]);
+                }
+            }
+        }
+
+        function handleFile(file) {
+            currentFile = file;
+            // 显示重命名弹窗
+            document.getElementById('originalFileName').textContent = file.name;
+            // 设置默认的新文件名（不包含扩展名）
+            const extension = file.name.lastIndexOf('.') > -1 
+                ? file.name.substring(file.name.lastIndexOf('.'))
+                : '';
+            const nameWithoutExtension = file.name.substring(0, file.name.lastIndexOf('.'));
+            document.getElementById('newFileName').value = nameWithoutExtension;
+            renameModal.show();
+        }
+
+        // 处理重命名确认
+        document.getElementById('confirmRename').addEventListener('click', function() {
+            const newFileName = document.getElementById('newFileName').value;
+            const extension = currentFile.name.lastIndexOf('.') > -1 
+                ? currentFile.name.substring(currentFile.name.lastIndexOf('.'))
+                : '';
+            finalFileName = newFileName + extension;
+            
+            // 更新界面显示
+            displayFileName.textContent = finalFileName;
+            selectedFile.classList.add('show');
+            uploadActions.classList.add('show');
+            
+            // 禁用上传功能
+            uploadArea.classList.add('disabled');
+            selectButton.disabled = true;
+            uploadText.textContent = '文件已选择';
+            uploadSubText.style.display = 'none';
+            
+            // 关闭弹窗
+            renameModal.hide();
+            fileInput.value = '';
+        });
+
+        // 重置上传区域
+        function resetUploadArea() {
+            uploadArea.classList.remove('disabled');
+            selectButton.disabled = false;
+            uploadText.textContent = '拖拽文件到这里上传';
+            uploadSubText.style.display = 'block';
+            selectedFile.classList.remove('show');
+            uploadActions.classList.remove('show');
+            fileInput.value = '';
+            currentFile = null;
+            finalFileName = '';
+        }
+
+        // 取消按钮点击事件
+        cancelButton.addEventListener('click', resetUploadArea);
+
+        // 上传按钮点击事件
+        uploadButton.addEventListener('click', function() {
+            // 这里添加文件上传的逻辑
+            const formData = new FormData();
+            formData.append('file', currentFile);
+            formData.append('filename', finalFileName);
+            
+            // 示例：发送到后端接口
+            axios.post('/api/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }).then(response => {
+                // 上传成功后的处理
+                alert('文件上传成功！');
+                resetUploadArea();
+            }).catch(error => {
+                // 上传失败后的处理
+                alert('文件上传失败：' + error.message);
+            });
         });
     </script>
 </body>
