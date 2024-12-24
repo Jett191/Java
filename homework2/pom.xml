@@ -1,15 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  这是Maven项目的项目对象模型（POM）文件。
+  它定义了项目的依赖项、构建配置和其他设置。
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!-- POM文件的模型版本 -->
   <modelVersion>4.0.0</modelVersion>
 
+  <!-- 项目坐标：groupId, artifactId和version -->
   <groupId>com.example</groupId>
   <artifactId>homework2</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>homework2</name>
   <packaging>war</packaging>
 
+  <!-- 项目属性 -->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>17</maven.compiler.target>
@@ -17,51 +24,61 @@
     <junit.version>5.11.0-M2</junit.version>
   </properties>
 
+  <!-- 项目依赖项 -->
   <dependencies>
+    <!-- Jakarta Servlet API依赖项 -->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
       <version>6.1.0</version>
       <scope>provided</scope>
     </dependency>
+    <!-- JUnit Jupiter API测试依赖项 -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+    <!-- JUnit Jupiter Engine测试依赖项 -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+    <!-- MyBatis依赖项 -->
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
       <version>3.5.13</version>
     </dependency>
+    <!-- MySQL连接器依赖项 -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.32</version>
     </dependency>
+    <!-- Log4j日志依赖项 -->
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>1.2.17</version>
     </dependency>
+    <!-- SLF4J Log4j绑定依赖项 -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>2.0.16</version>
     </dependency>
+    <!-- TestNG测试依赖项 -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>RELEASE</version>
       <scope>test</scope>
     </dependency>
+    <!-- JUnit 4测试依赖项 -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -70,8 +87,10 @@
     </dependency>
   </dependencies>
 
+  <!-- 构建配置 -->
   <build>
     <plugins>
+      <!-- Maven WAR插件配置 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
