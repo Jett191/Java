@@ -29,6 +29,10 @@
             background-color: #1976d2;
             border-color: #1976d2;
         }
+        #userInfo {
+            display: none;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -36,12 +40,46 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <span class="navbar-brand">文件管理系统</span>
-            <div class="d-flex">
-                <button class="btn btn-outline-light me-2">登录</button>
-                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#registerModal">注册</button>
+            <div class="d-flex align-items-center">
+                <div id="userInfo" class="me-3">
+                    欢迎，<span id="username"></span>
+                </div>
+                <div id="authButtons">
+                    <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#loginModal">登录</button>
+                    <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#registerModal">注册</button>
+                </div>
+                <button id="logoutBtn" class="btn btn-outline-light" style="display: none;">退出</button>
             </div>
         </div>
     </nav>
+
+    <!-- 登录模态框 -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">用户登录</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginUsername" class="form-label">用户名</label>
+                            <input type="text" class="form-control" id="loginUsername" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">密码</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="loginButton">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 注册模态框 -->
     <div class="modal fade" id="registerModal" tabindex="-1">
@@ -54,16 +92,16 @@
                 <div class="modal-body">
                     <form id="registerForm">
                         <div class="mb-3">
-                            <label for="username" class="form-label">用户名</label>
-                            <input type="text" class="form-control" id="username" name="username" required>
+                            <label for="registerUsername" class="form-label">用户名</label>
+                            <input type="text" class="form-control" id="registerUsername" required>
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">密码</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
+                            <label for="registerPassword" class="form-label">密码</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">邮箱</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            <label for="registerEmail" class="form-label">邮箱</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
                         </div>
                     </form>
                 </div>
@@ -93,14 +131,59 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const registerButton = document.getElementById('registerButton');
+            const loginButton = document.getElementById('loginButton');
+            const logoutBtn = document.getElementById('logoutBtn');
             const registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+            const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
             const toast = new bootstrap.Toast(document.getElementById('toast'));
             const toastMessage = document.getElementById('toastMessage');
+            const userInfo = document.getElementById('userInfo');
+            const authButtons = document.getElementById('authButtons');
+            const usernameSpan = document.getElementById('username');
 
+            // 检查是否已登录
+            const token = localStorage.getItem('token');
+            if (token) {
+                const username = localStorage.getItem('username');
+                showLoggedInState(username);
+            }
+
+            // 配置axios拦截器
+            axios.interceptors.request.use(
+                config => {
+                    const token = localStorage.getItem('token');
+                    if (token) {
+                        config.headers.Authorization = `Bearer ${token}`;
+                    }
+                    return config;
+                },
+                error => {
+                    return Promise.reject(error);
+                }
+            );
+
+            // 响应拦截器
+            axios.interceptors.response.use(
+                response => response,
+                error => {
+                    if (error.response && error.response.status === 401) {
+                        // token过期或无效，清除本地存储并显示未登录状态
+                        localStorage.removeItem('token');
+                        localStorage.removeItem('userId');
+                        localStorage.removeItem('username');
+                        showLoggedOutState();
+                        toastMessage.textContent = '登录已过期，请重新登录';
+                        toast.show();
+                    }
+                    return Promise.reject(error);
+                }
+            );
+
+            // 注册功能
             registerButton.addEventListener('click', async function() {
-                const username = document.getElementById('username').value;
-                const password = document.getElementById('password').value;
-                const email = document.getElementById('email').value;
+                const username = document.getElementById('registerUsername').value;
+                const password = document.getElementById('registerPassword').value;
+                const email = document.getElementById('registerEmail').value;
 
                 const formData = {
                     username: username,
@@ -130,6 +213,73 @@
                 }
                 toast.show();
             });
+
+            // 登录功能
+            loginButton.addEventListener('click', async function() {
+                const username = document.getElementById('loginUsername').value;
+                const password = document.getElementById('loginPassword').value;
+
+                const loginData = {
+                    username: username,
+                    password: password
+                };
+
+                try {
+                    console.log('Sending login request:', loginData);
+                    const response = await axios.post('/homework6_war_exploded/user/login', loginData, {
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    console.log('Login response:', response);
+
+                    if (response.data.success) {
+                        // 保存token和用户信息
+                        localStorage.setItem('token', response.data.token);
+                        localStorage.setItem('userId', response.data.userId);
+                        localStorage.setItem('username', response.data.username);
+
+                        toastMessage.textContent = '登录成功！';
+                        loginModal.hide();
+                        document.getElementById('loginForm').reset();
+                        
+                        // 显示已登录状态
+                        showLoggedInState(response.data.username);
+                    } else {
+                        toastMessage.textContent = response.data.message || '登录失败';
+                    }
+                } catch (error) {
+                    console.error('Login error:', error);
+                    toastMessage.textContent = error.response?.data?.message || '登录失败，请稍后重试';
+                }
+                toast.show();
+            });
+
+            // 退出功能
+            logoutBtn.addEventListener('click', function() {
+                localStorage.removeItem('token');
+                localStorage.removeItem('userId');
+                localStorage.removeItem('username');
+                showLoggedOutState();
+                toastMessage.textContent = '已退出登录';
+                toast.show();
+            });
+
+            // 显示已登录状态
+            function showLoggedInState(username) {
+                userInfo.style.display = 'block';
+                authButtons.style.display = 'none';
+                logoutBtn.style.display = 'block';
+                usernameSpan.textContent = username;
+            }
+
+            // 显示未登录状态
+            function showLoggedOutState() {
+                userInfo.style.display = 'none';
+                authButtons.style.display = 'block';
+                logoutBtn.style.display = 'none';
+                usernameSpan.textContent = '';
+            }
         });
     </script>
 </body>
