@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0">
+
+    <!-- 编码过滤器：确保请求和响应使用 UTF-8 编码 -->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value> <!-- 设置编码为 UTF-8 -->
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value> <!-- 强制使用 UTF-8 编码 -->
+        </init-param>
+    </filter>
+
+    <!-- 映射编码过滤器到所有请求 -->
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern> <!-- 所有 URL 路径都会经过该过滤器 -->
+    </filter-mapping>
+
+    <!-- DispatcherServlet：Spring MVC 的核心，处理所有的 HTTP 请求 -->
+    <servlet>
+        <servlet-name>dispatcher</servlet-name> <!-- DispatcherServlet 的名字 -->
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> <!-- Spring MVC 的核心类 -->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:springMVC.xml</param-value> <!-- 配置 Spring MVC 上下文的文件 -->
+        </init-param>
+        <load-on-startup>1</load-on-startup> <!-- 确保应用启动时加载 DispatcherServlet -->
+    </servlet>
+
+    <!-- 映射 DispatcherServlet 处理所有请求 -->
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name> <!-- 映射的 Servlet 名称 -->
+        <url-pattern>/</url-pattern> <!-- 处理根路径下的所有请求 -->
+    </servlet-mapping>
+
+    <!-- ContextLoaderListener：启动时加载 Spring 的根应用上下文 -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> <!-- 用于加载 Spring 配置 -->
+    </listener>
+
+    <!-- 配置 Spring 根应用上下文的配置文件 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:applicationContext.xml</param-value> <!-- 配置根上下文的 XML 文件 -->
+    </context-param>
+
+</web-app>

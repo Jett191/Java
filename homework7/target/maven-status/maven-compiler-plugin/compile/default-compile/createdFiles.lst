@@ -1,0 +1,16 @@
+com/example/controller/FileController.class
+com/example/controller/FileCategoryController.class
+com/example/dao/FileRepository.class
+com/example/dao/FileCategoryRepository.class
+com/example/entity/FileInfo.class
+com/example/dao/UserRepository.class
+com/example/entity/FileCategory.class
+com/example/service/SpaceServiceImpl.class
+com/example/service/FileCategoryServiceImpl.class
+com/example/dao/SpaceRepository.class
+com/example/service/UserServiceImpl.class
+com/example/controller/SpaceController.class
+com/example/entity/Space.class
+com/example/controller/UserController.class
+com/example/entity/User.class
+com/example/service/FileServiceImpl.class
