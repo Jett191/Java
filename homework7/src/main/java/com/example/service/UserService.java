@@ -32,7 +32,7 @@ public class UserService {
         Space space = new Space();
         space.setUserId(savedUser.getUserId()); // 设置用户ID
         space.setSpaceName(savedUser.getUserName() + "的空间"); // 设置空间名称为用户的名字
-        space.setSpaceSize(5242880L); // 默认空间大小为5MB
+        space.setSpaceSize(104857600L); // 设置空间大小为100MB
         space.setUsedSpace(0L); // 初始已用空间为0
         spaceService.createSpace(space); // 保存空间信息
 
