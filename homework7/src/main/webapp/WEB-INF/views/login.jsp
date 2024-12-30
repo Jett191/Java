@@ -10,6 +10,7 @@
       }
     </style>
     <script>
+      // 切换密码字段的可见性
       function togglePassword() {
         const passwordInput = document.getElementById('userPassword');
         const eyeIcon = document.getElementById('eyeIcon');

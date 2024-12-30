@@ -11,12 +11,12 @@
 </head>
 <body class="min-h-screen flex flex-col items-center justify-start py-8">
 
-<!-- Header部分 -->
+<!-- 页面顶部：标题和导航链接 -->
 <div class="w-full max-w-4xl px-4 mb-6">
     <h1 class="text-2xl font-bold text-center text-blue-500">
         个人空间管理
     </h1>
-    <!-- 返回文件列表链接 -->
+    <!-- 返回文件列表的按钮 -->
     <div class="mt-4 text-center">
         <a href="${pageContext.request.contextPath}/file/list"
            class="inline-block bg-blue-500 text-white font-medium py-2 px-6 rounded-lg shadow-md hover:bg-blue-600 transform hover:scale-105 transition-all duration-300">
@@ -25,10 +25,10 @@
     </div>
 </div>
 
-<!-- 表单卡片 -->
+<!-- 空间管理表单容器 -->
 <div class="w-full max-w-2xl bg-white shadow-lg rounded-xl p-6">
     <form action="${pageContext.request.contextPath}/space/update" method="post" class="space-y-6">
-        <!-- 空间名称输入框 -->
+        <!-- 输入新的空间名称 -->
         <div>
             <label for="spaceName" class="block text-sm font-medium text-gray-700">空间名称</label>
             <div class="mt-1">
@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <!-- 空间大小输入框 -->
+        <!-- 输入新的空间容量（以MB为单位） -->
         <div>
             <label for="spaceSize" class="block text-sm font-medium text-gray-700">空间大小 (MB)</label>
             <div class="mt-1">
@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <!-- 提交按钮 -->
+        <!-- 提交更新空间信息的按钮 -->
         <div class="text-center">
             <button type="submit"
                     class="w-full py-3 rounded-lg bg-blue-500 text-white font-bold shadow-md hover:bg-blue-600 transform hover:scale-105 transition-all duration-300">

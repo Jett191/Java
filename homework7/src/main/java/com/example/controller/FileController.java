@@ -24,21 +24,21 @@ public class FileController {
     private FileService fileService; // 自动注入FileServiceImpl，处理文件的业务逻辑
 
     @Autowired
-    private FileKindService categoryService; //处理文件分类的业务逻辑
+    private FileKindService categoryService; // 处理文件分类的业务逻辑
 
     @Autowired
-    private SpaceService spaceService; //处理空间管理的业务逻辑
+    private SpaceService spaceService; // 处理空间管理的业务逻辑
 
     @Autowired
-    private FileDao fileDao; //用于文件数据的持久化操作
+    private FileDao fileDao; // 用于文件数据的持久化操作
 
     // 显示上传页面，获取所有文件分类信息并传递到视图
     @GetMapping("/upload")
     public String showUploadPage(Model model, HttpSession session) {
-        // 从会话中获取当前登录用户
+        // 会话获取登录用户
         User user = (User) session.getAttribute("loginUser");
         if (user == null) {
-            // 如果用户未登录，重定向到登录页面
+            // 未登录 重定向
             return "redirect:/login";
         }
         // 获取所有文件分类信息，并将其添加到模型中，以便在视图中使用
@@ -117,7 +117,7 @@ public class FileController {
         }
     }
 
-    // 切换文件的状态（例如，激活或禁用）
+    // 切换文件的冻结状态
     @PostMapping("/toggle-status/{fileId}")
     @ResponseBody // 返回响应体
     public ResponseEntity<?> toggleFileStatus(@PathVariable Integer fileId) {

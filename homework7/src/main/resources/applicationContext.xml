@@ -1,9 +1,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd
@@ -12,39 +12,42 @@
        http://www.springframework.org/schema/data/jpa
        http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
+    <!-- 自动扫描com.example包下的所有组件 -->
     <context:component-scan base-package="com.example"/>
 
-    <!-- 数据源配置 -->
+    <!-- 数据源配置，用于连接MySQL数据库 -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/spring-mvc-work?useSSL=false&amp;serverTimezone=UTC"/>
-        <property name="username" value="root"/>
-        <property name="password" value="root"/>
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/> <!-- JDBC驱动 -->
+        <property name="url" value="jdbc:mysql://localhost:3306/spring-mvc-work?useSSL=false&amp;serverTimezone=UTC"/> <!-- 数据库URL -->
+        <property name="username" value="root"/> <!-- 数据库用户名 -->
+        <property name="password" value="root"/> <!-- 数据库密码 -->
     </bean>
 
-    <!-- JPA实体管理器工厂 -->
+    <!-- 配置JPA实体管理器工厂 -->
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="packagesToScan" value="com.example.entity"/>
+        <property name="dataSource" ref="dataSource"/> <!-- 配置数据源 -->
+        <property name="packagesToScan" value="com.example.entity"/> <!-- 扫描实体类所在的包 -->
         <property name="jpaVendorAdapter">
-            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/> <!-- 使用Hibernate作为JPA实现 -->
         </property>
         <property name="jpaProperties">
             <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</prop>
-                <prop key="hibernate.hbm2ddl.auto">validate</prop>
-                <prop key="hibernate.show_sql">true</prop>
+                <!-- Hibernate相关配置 -->
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</prop> <!-- 使用MySQL 8的方言 -->
+                <prop key="hibernate.hbm2ddl.auto">validate</prop> <!-- 校验数据库与实体类映射 -->
+                <prop key="hibernate.show_sql">true</prop> <!-- 显示SQL语句 -->
             </props>
         </property>
     </bean>
 
-    <!-- 事务管理器 -->
+    <!-- 配置事务管理器 -->
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+        <property name="entityManagerFactory" ref="entityManagerFactory"/> <!-- 关联实体管理器工厂 -->
     </bean>
 
+    <!-- 启用Spring的注解驱动的事务管理 -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
-    <!-- JPA仓库配置 -->
-    <jpa:repositories base-package="com.example.dao"/>
+    <!-- 配置JPA仓库扫描 -->
+    <jpa:repositories base-package="com.example.dao"/> <!-- 扫描DAO层中的JPA接口 -->
 </beans>

@@ -1,37 +1,37 @@
 package com.example.controller;
 
-import com.example.dao.FileKindDao; // 引入文件分类的Repository，用于与数据库交互
-import com.example.entity.FileKind; // 引入FileCategory实体类，代表文件分类的数据模型
-import com.example.service.FileKindService; // 引入FileCategoryServiceImpl，处理业务逻辑
-import org.springframework.beans.factory.annotation.Autowired; // 引入Autowired注解，用于自动注入依赖
-import org.springframework.stereotype.Controller; // 引入Controller注解，标记为Spring MVC的控制器
-import org.springframework.web.bind.annotation.PostMapping; // 引入PostMapping注解，处理HTTP POST请求
-import org.springframework.web.bind.annotation.RequestMapping; // 引入RequestMapping注解，映射请求路径
-import org.springframework.web.bind.annotation.RequestParam; // 引入RequestParam注解，用于获取请求参数
-import org.springframework.web.bind.annotation.ResponseBody; // 引入ResponseBody注解，表示返回的结果直接作为响应体
+import com.example.dao.FileKindDao; // 导入文件分类数据库操作类，用于执行增删改查
+import com.example.entity.FileKind; // 导入文件分类实体类，定义文件分类的数据结构
+import com.example.service.FileKindService; // 导入业务逻辑层服务，用于处理文件分类相关的操作
+import org.springframework.beans.factory.annotation.Autowired; // 用于自动注入Spring容器中的依赖
+import org.springframework.stereotype.Controller; // 标识该类为Spring MVC的控制器组件
+import org.springframework.web.bind.annotation.PostMapping; // 处理POST请求的注解
+import org.springframework.web.bind.annotation.RequestMapping; // 用于配置请求路径的注解
+import org.springframework.web.bind.annotation.RequestParam; // 用于获取请求参数的注解
+import org.springframework.web.bind.annotation.ResponseBody; // 指定方法返回值直接写入响应体中
 
-@Controller // 标记该类为Spring MVC的控制器
-@RequestMapping("/category") // 请求映射的基本路径，所有该类的方法将以 "/category" 为基础路径
+@Controller // 声明这是一个控制器类
+@RequestMapping("/category") // 该控制器负责处理以 "/category" 为前缀的请求路径
 public class FileKindController {
 
     @Autowired
-    private FileKindDao categoryRepository; // 自动注入FileCategoryRepository，管理数据库操作
+    private FileKindDao categoryRepository; // 自动注入文件分类的数据库操作类，用于数据持久化
 
-    // 此方法为内部方法，未被请求映射
+    // 该方法是内部辅助方法，不会被请求直接访问
     public void addCategory(FileKind category) {
-        categoryRepository.save(category); // 保存文件分类到数据库
+        categoryRepository.save(category); // 将文件分类信息保存到数据库中
     }
 
     @Autowired
-    private FileKindService categoryService; // 自动注入FileCategoryServiceImpl，处理文件分类的业务逻辑
+    private FileKindService categoryService; // 自动注入文件分类的业务逻辑处理类
 
-    @PostMapping("/add") // 处理 "/category/add" 路径的POST请求
-    @ResponseBody // 表示返回的数据直接写入HTTP响应体中
+    @PostMapping("/add") // 映射 "/category/add" 路径的POST请求
+    @ResponseBody // 将返回值直接写入HTTP响应体，返回的内容无需视图解析
     public String addCategory(@RequestParam String cateName) {
-        // 接收前端请求中的参数 cateName，代表文件分类的名称
-        FileKind category = new FileKind(); // 创建一个新的FileCategory对象
-        category.setCateName(cateName); // 设置文件分类的名称为请求中的参数
-        categoryService.addCategory(category); // 调用业务层的addCategory方法，执行保存操作
-        return "success"; // 返回字符串"success"，表示操作成功
+        // 获取客户端请求中传递的文件分类名称
+        FileKind category = new FileKind(); // 创建新的文件分类对象
+        category.setCateName(cateName); // 设置文件分类名称
+        categoryService.addCategory(category); // 调用服务层方法，处理保存操作
+        return "success"; // 返回操作成功的提示信息
     }
 }
