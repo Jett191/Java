@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.entity.User; // 用户实体
-import com.example.service.UserServiceImpl; // 用户业务逻辑
+import com.example.service.UserService; // 用户业务逻辑
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 public class UserController {
 
     @Autowired
-    private UserServiceImpl userService; // 用户服务
+    private UserService userService; // 用户服务
 
     // 显示登录页面
     @GetMapping("/login")

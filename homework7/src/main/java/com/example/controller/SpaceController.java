@@ -1,9 +1,9 @@
 package com.example.controller;
 
-import com.example.dao.SpaceRepository; // 用于与空间数据交互
+import com.example.dao.SpaceDao; // 用于与空间数据交互
 import com.example.entity.Space; // 空间实体
 import com.example.entity.User; // 用户实体
-import com.example.service.SpaceServiceImpl; // 空间业务逻辑
+import com.example.service.SpaceService; // 空间业务逻辑
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,9 +16,9 @@ import javax.servlet.http.HttpSession;
 public class SpaceController {
 
     @Autowired
-    private SpaceServiceImpl spaceService; // 空间服务
+    private SpaceService spaceService; // 空间服务
     @Autowired
-    private SpaceRepository spaceRepository; // 空间数据库操作
+    private SpaceDao spaceDao; // 空间数据库操作
 
     // 显示空间管理页面
     @GetMapping("/space/manage")
@@ -42,7 +42,7 @@ public class SpaceController {
         Space space = spaceService.getSpaceByUserId(user.getUserId());
         space.setSpaceName(spaceName); // 更新空间名称
         space.setSpaceSize(spaceSize); // 更新空间大小
-        spaceRepository.save(space); // 保存更新后的空间信息
+        spaceDao.save(space); // 保存更新后的空间信息
         return "redirect:/space/manage"; // 重定向回空间管理页面
     }
 }

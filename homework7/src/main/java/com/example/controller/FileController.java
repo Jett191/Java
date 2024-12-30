@@ -1,11 +1,11 @@
 package com.example.controller;
 
-import com.example.dao.FileRepository;
-import com.example.entity.FileInfo;
+import com.example.dao.FileDao;
+import com.example.entity.File;
 import com.example.entity.User;
-import com.example.service.FileCategoryServiceImpl;
-import com.example.service.FileServiceImpl;
-import com.example.service.SpaceServiceImpl;
+import com.example.service.FileKindService;
+import com.example.service.FileService;
+import com.example.service.SpaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -21,16 +21,16 @@ import java.io.*;
 public class FileController {
 
     @Autowired
-    private FileServiceImpl fileService; // 自动注入FileServiceImpl，处理文件的业务逻辑
+    private FileService fileService; // 自动注入FileServiceImpl，处理文件的业务逻辑
 
     @Autowired
-    private FileCategoryServiceImpl categoryService; //处理文件分类的业务逻辑
+    private FileKindService categoryService; //处理文件分类的业务逻辑
 
     @Autowired
-    private SpaceServiceImpl spaceService; //处理空间管理的业务逻辑
+    private SpaceService spaceService; //处理空间管理的业务逻辑
 
     @Autowired
-    private FileRepository fileRepository; //用于文件数据的持久化操作
+    private FileDao fileDao; //用于文件数据的持久化操作
 
     // 显示上传页面，获取所有文件分类信息并传递到视图
     @GetMapping("/upload")
@@ -83,11 +83,11 @@ public class FileController {
     @GetMapping("/download/{fileId}")
     public void downloadFile(@PathVariable Integer fileId, HttpServletResponse response) {
         // 从数据库中获取文件信息
-        FileInfo fileInfo = fileRepository.findById(fileId)
+        File fileInfo = fileDao.findById(fileId)
             .orElseThrow(() -> new RuntimeException("文件不存在"));
 
         // 根据文件路径和文件保存名构建文件对象
-        File file = new File(fileInfo.getFilePath(), fileInfo.getFileSaveName());
+        java.io.File file = new java.io.File(fileInfo.getFilePath(), fileInfo.getFileSaveName());
 
         // 如果文件不存在，抛出异常
         if (!file.exists()) {
@@ -101,7 +101,7 @@ public class FileController {
 
         // 更新文件的下载次数
         fileInfo.setDownCount(fileInfo.getDownCount() + 1);
-        fileRepository.save(fileInfo);
+        fileDao.save(fileInfo);
 
         // 读取文件并写入到HTTP响应流中，供用户下载
         try (InputStream inputStream = new FileInputStream(file);

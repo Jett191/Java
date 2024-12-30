@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class FileCategory {
+public class FileKind {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

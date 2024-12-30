@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class FileInfo {
+public class File {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer fileId;

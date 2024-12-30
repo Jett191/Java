@@ -1,6 +1,6 @@
 package com.example.service;
 
-import com.example.dao.UserRepository; // 用户数据访问层
+import com.example.dao.UserDao; // 用户数据访问层
 import com.example.entity.Space; // 空间实体
 import com.example.entity.User; // 用户实体
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,23 +10,23 @@ import org.springframework.util.DigestUtils; // MD5加密工具
 
 @Service // 标记为服务层
 @Transactional // 事务管理
-public class UserServiceImpl {
+public class UserService {
 
     @Autowired
-    private UserRepository userRepository; // 注入用户数据访问层
+    private UserDao userDao; // 注入用户数据访问层
     @Autowired
-    private SpaceServiceImpl spaceService; // 注入空间服务
+    private SpaceService spaceService; // 注入空间服务
 
     // 注册用户
     public User register(User user) {
         // 检查用户名是否已存在
-        if (userRepository.findByUserName(user.getUserName()) != null) {
+        if (userDao.findByUserName(user.getUserName()) != null) {
             throw new RuntimeException("用户名已存在");
         }
 
         // 加密用户密码
         user.setUserPassword(DigestUtils.md5DigestAsHex(user.getUserPassword().getBytes()));
-        User savedUser = userRepository.save(user); // 保存用户信息
+        User savedUser = userDao.save(user); // 保存用户信息
 
         // 创建并保存用户空间
         Space space = new Space();
@@ -43,6 +43,6 @@ public class UserServiceImpl {
     public User login(String userName, String password) {
         // 加密密码并进行验证
         String encryptedPassword = DigestUtils.md5DigestAsHex(password.getBytes());
-        return userRepository.findByUserNameAndUserPassword(userName, encryptedPassword); // 返回匹配的用户
+        return userDao.findByUserNameAndUserPassword(userName, encryptedPassword); // 返回匹配的用户
     }
 }
