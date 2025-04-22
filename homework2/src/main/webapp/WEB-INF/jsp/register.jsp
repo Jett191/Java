@@ -8,10 +8,10 @@
 </head>
 <body>
 <h2>用户注册</h2>
-<form action="${pageContext.request.contextPath}/api/user/register" method="post">
+<form action="${pageContext.request.contextPath}/user/register" method="post">
     <p>用户名：<input type="text" name="name" required/></p>
     <p>密码：  <input type="password" name="password" required/></p>
-    <p>邮箱：  <input type="email" name="email" required/></p>
+    <p>邮箱：  <input type="text" name="email" required/></p>
     <p><button type="submit">注册</button></p>
 </form>
 <c:if test="${not empty error}">

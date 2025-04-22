@@ -23,5 +23,5 @@
 	<context:component-scan base-package="com.homework2.config"/>
 
 	<!-- 启用基于注解的事务管理 -->
-	<tx:annotation-driven transaction-manager="transactionManager" />
+	<tx:annotation-driven />
 </beans>

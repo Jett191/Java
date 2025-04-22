@@ -26,8 +26,9 @@ public class UserDirectoryAspect {
   private UserMapper userMapper;
 
   @AfterReturning(
-      pointcut = "execution(* com.homework2.service.impl.UserImpl.register(..)) && args(userInfo)",
-      returning = "success"
+      pointcut   = "execution(* com.homework2.service.impl.UserImpl.register(..)) && args(userInfo)",
+      returning  = "success",
+      argNames   = "jp,userInfo,success"
   )
   public void onRegister(JoinPoint jp, UserRegisterRequest userInfo, boolean success) throws IOException {
     if (!success) return;

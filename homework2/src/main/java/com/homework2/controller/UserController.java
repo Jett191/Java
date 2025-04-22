@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping("/api/user")
+@RequestMapping("/user")
 public class UserController {
 
   @Autowired
@@ -47,7 +47,7 @@ public class UserController {
       return "login";
     }
     model.addAttribute("user", user);
-    return "home";
+    return "redirect:/file/home";
   }
 
 

@@ -27,6 +27,7 @@ public class UserImpl implements UserService {
     user.setName(userInfo.getName());
     user.setPassword(userInfo.getPassword());
     user.setSize(100.00);
+    user.setDeleted(0);
 
     return userMapper.insert(user) > 0;
   }

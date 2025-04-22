@@ -9,7 +9,7 @@
 <body>
 <h2>用户登录</h2>
 <form action="${pageContext.request.contextPath}/user/login" method="post">
-  <p>用户名：<input type="text" name="name" required/></p>
+  <p>邮箱：<input type="text" name="email" required/></p>
   <p>密码：  <input type="password" name="password" required/></p>
   <p><button type="submit">登录</button></p>
 </form>

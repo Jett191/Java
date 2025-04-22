@@ -11,13 +11,13 @@
            http://www.springframework.org/schema/mvc
            http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-	<!-- 启用 Spring MVC 注解支持 -->
+
 	<mvc:annotation-driven />
 
-	<!-- 静态资源处理，交由默认 Servlet 转发 -->
+
 	<mvc:default-servlet-handler />
 
-	<!-- 配置视图解析器，请根据项目实际情况调整前缀和后缀 -->
+
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
 		<property name="prefix" value="/WEB-INF/jsp/" />
