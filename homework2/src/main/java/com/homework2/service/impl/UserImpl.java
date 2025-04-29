@@ -44,7 +44,7 @@ public class UserImpl implements UserService {
     userLoginInfoResponse.setName(user.getName());
     userLoginInfoResponse.setPath(user.getPath());
     userLoginInfoResponse.setSize(user.getSize());
-
+    userLoginInfoResponse.setUserId(user.getUserId());
     return  userLoginInfoResponse;
   }
 }

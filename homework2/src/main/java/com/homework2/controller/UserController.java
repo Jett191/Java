@@ -4,12 +4,14 @@ import com.homework2.dto.UserLoginRequest;
 import com.homework2.dto.UserRegisterRequest;
 import com.homework2.dto.UserLoginInfoResponse;
 import com.homework2.service.UserService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 
 @Controller
@@ -40,13 +42,14 @@ public class UserController {
   }
 
   @PostMapping("/login")
-  public String login(UserLoginRequest userInfo, Model model) {
+  public String login(UserLoginRequest userInfo, Model model, HttpSession session) {
     UserLoginInfoResponse user = userService.login(userInfo);
     if (user == null) {
       model.addAttribute("error", "用户名或密码错误");
       return "login";
     }
     model.addAttribute("user", user);
+    session.setAttribute("currentUserId",user.getUserId());
     return "redirect:/file/home";
   }
 
