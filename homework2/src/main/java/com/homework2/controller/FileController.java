@@ -1,7 +1,9 @@
 package com.homework2.controller;
 
+import com.homework2.dto.FileInfoResponse;
 import com.homework2.service.FileService;
 import jakarta.servlet.http.HttpSession;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +21,10 @@ public class FileController {
   private FileService fileService;
 
   @GetMapping("/home")
-  public String showRegister() {
+  public String showHome(Model model,HttpSession session) {
+    Integer userId = (Integer) session.getAttribute("currentUserId");
+    List<FileInfoResponse> files = fileService.listFilesByUserId(userId);
+    model.addAttribute("files", files);
     return "home";
   }
 
@@ -40,8 +45,11 @@ public class FileController {
       model.addAttribute("success", false);
       model.addAttribute("message", "上传失败：" + e.getMessage());
     }
-    return "home";
+    return showHome(model, session);
   }
+
+
+
 
 
 
