@@ -16,6 +16,7 @@ public class FileInfo {
   private Double size;
   private Integer userId;
   private String type;
+  private Integer count;
   private Instant createdTime;
   private Instant deletedTime;
   private Integer deleted;

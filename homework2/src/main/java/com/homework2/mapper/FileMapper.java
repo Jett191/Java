@@ -18,6 +18,7 @@ public interface FileMapper {
           + "  u.name AS userName, "           // 将 user 表的 name 字段映射为 DTO 的 userName
           + "  f.size, "
           + "  f.type, "
+          + "  f.count,"
           + "  f.created_time AS createdTime, "
           + "  f.deleted "
           + "FROM `file` f "
@@ -33,9 +34,9 @@ public interface FileMapper {
    */
   @Insert(
       "INSERT INTO `file` " +
-          "  (file_id, user_id, name, path, size, type, created_time, deleted) " +
+          "  (file_id, user_id, name, path, size, type, created_time, deleted,count) " +
           "VALUES " +
-          "  (#{fileId}, #{userId}, #{name}, #{path}, #{size}, #{type}, #{createdTime}, #{deleted})"
+          "  (#{fileId}, #{userId}, #{name}, #{path}, #{size}, #{type}, #{createdTime}, #{deleted}, #{count})"
   )
   // 既然你自己生成 UUID，就不需要自动回填，这里可以去掉 @Options
   int insert(FileInfo fileInfo);

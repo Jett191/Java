@@ -181,6 +181,8 @@
                 <th>大小 (MB)</th>
                 <th>类型</th>
                 <th>上传时间</th>
+                <th>下载量</th>           <!-- 新增列 -->
+                <th>操作</th>             <!-- 新增列 -->
             </tr>
             </thead>
             <tbody>
@@ -204,6 +206,21 @@
                         <fmt:formatDate
                                 value="${dt}"
                                 pattern="yyyy-MM-dd HH:mm:ss"/>
+                    </td>
+                    <td>
+                        <!-- 假设后端文件对象有 count 字段 -->
+                            ${file.count}
+                    </td>
+                    <td>
+                        <!-- 下载按钮 -->
+                        <a href="${pageContext.request.contextPath}/file/download?fileId=${file.fileId}">
+                            下载
+                        </a>
+                        <!-- 删除按钮 -->
+                        <a href="${pageContext.request.contextPath}/file/delete?fileId=${file.fileId}"
+                           onclick="return confirm('确定要删除此文件？');">
+                            删除
+                        </a>
                     </td>
                 </tr>
             </c:forEach>

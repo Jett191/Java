@@ -9,10 +9,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FileInfoResponse {
+    Integer fileId;
     String name;
     String userName;
     Double size;
     String type;
+    Integer count;
     Instant createdTime;
     Integer deleted;
 }
