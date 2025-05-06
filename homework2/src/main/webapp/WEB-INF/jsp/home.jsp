@@ -9,13 +9,19 @@
     <title>欢迎页面</title>
     <style>
       /* 全局重置 & 容器 */
-      * { margin: 0; padding: 0; box-sizing: border-box; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
         font-family: "Helvetica Neue", Arial, sans-serif;
         background-color: #f7f9fc;
         color: #333;
         line-height: 1.6;
       }
+
       .container {
         max-width: 1000px;
         margin: 20px auto;
@@ -30,21 +36,25 @@
         background-color: #ffffff;
         padding: 12px 24px;
         border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         margin-bottom: 24px;
       }
+
       .navbar .user-info span {
         margin-right: 16px;
         font-weight: 500;
       }
+
       .navbar .actions form,
       .navbar .actions a {
         display: inline-block;
         vertical-align: middle;
       }
+
       .navbar .actions input[type="file"] {
         margin-right: 8px;
       }
+
       .navbar .actions button,
       .navbar .actions a {
         padding: 6px 14px;
@@ -57,10 +67,11 @@
         cursor: pointer;
         transition: background-color .2s, box-shadow .2s;
       }
+
       .navbar .actions button:hover,
       .navbar .actions a:hover {
         background-color: #f0f0f0;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       }
 
       /* 提示框 */
@@ -72,19 +83,28 @@
         font-size: 14px;
         animation: fadeIn 0.3s ease-out;
       }
+
       .notification.success {
         background-color: #e6f7e8;
         color: #2a7f3e;
         border: 1px solid #b9e2c4;
       }
+
       .notification.error {
         background-color: #fff2f0;
         color: #c92c2c;
         border: 1px solid #f5c2c7;
       }
+
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       /* 表格 */
@@ -92,30 +112,36 @@
         width: 100%;
         border-collapse: collapse;
         background: #fff;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         border-radius: 8px;
         overflow: hidden;
       }
+
       .file-table thead {
         background-color: #f0f4f8;
       }
+
       .file-table th,
       .file-table td {
         padding: 12px 16px;
         text-align: left;
         font-size: 14px;
       }
+
       .file-table th {
         font-weight: 600;
         color: #555;
       }
+
       .file-table tbody tr {
         border-bottom: 1px solid #eee;
         transition: background-color .2s;
       }
+
       .file-table tbody tr:nth-child(even) {
         background-color: #fafafa;
       }
+
       .file-table tbody tr:hover {
         background-color: #f1f5fa;
       }
@@ -149,10 +175,10 @@
             <form action="${pageContext.request.contextPath}/file/upload"
                   method="post"
                   enctype="multipart/form-data">
-                <input type="file" name="file" required />
+                <input type="file" name="file" required/>
                 <button type="submit">上传文件</button>
             </form>
-            <a href="${pageContext.request.contextPath}/user/login">退出</a>
+                <a href="${pageContext.request.contextPath}/user/login">退出</a>
         </div>
     </div>
 
@@ -163,7 +189,7 @@
                 ${message}
         </div>
         <script>
-          setTimeout(function() {
+          setTimeout(function () {
             var notif = document.getElementById('notification');
             if (notif) notif.style.display = 'none';
           }, 3000);
