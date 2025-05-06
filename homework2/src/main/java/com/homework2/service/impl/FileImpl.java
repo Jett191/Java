@@ -5,11 +5,15 @@ import com.homework2.dto.FileInfoResponse;
 import com.homework2.mapper.FileMapper;
 import com.homework2.mapper.UserMapper;
 import com.homework2.service.FileService;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.File;
+import java.io.IOException;
+import java.net.URLEncoder;
 import java.time.Instant;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -55,6 +59,39 @@ public class FileImpl implements FileService {
   @Override
   public List<FileInfoResponse> listFilesByUserId(Integer userId) {
     return fileMapper.findByUserId(userId);
+  }
+
+  @Override
+  public void downloadFile(Integer fileId, HttpServletResponse response) {
+    try {
+      // 1. 查询文件信息
+      FileInfoResponse info = fileMapper.selectFileById(fileId);
+      String filePath = info.getPath();
+      String fileName = info.getName();
+
+      File file = new File(filePath);
+      if (!file.exists()) {
+        response.sendError(HttpServletResponse.SC_NOT_FOUND, "文件不存在");
+        return;
+      }
+
+      // 2. 设置响应头
+      response.setContentType("application/octet-stream");
+      String encodedName = URLEncoder.encode(fileName, "UTF-8").replaceAll("\\+", "%20");
+      response.setHeader("Content-Disposition",
+          "attachment; filename*=UTF-8''" + encodedName);
+
+      // 3. 拷贝文件到 response
+      FileUtils.copyFile(file, response.getOutputStream());
+      response.flushBuffer();
+
+    } catch (IOException e) {
+      // 4. 异常处理
+      try {
+        response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+            "下载出错：" + e.getMessage());
+      } catch (IOException ignored) {}
+    }
   }
 
 }

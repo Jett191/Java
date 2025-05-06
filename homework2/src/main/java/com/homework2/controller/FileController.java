@@ -2,6 +2,7 @@ package com.homework2.controller;
 
 import com.homework2.dto.FileInfoResponse;
 import com.homework2.service.FileService;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,13 @@ public class FileController {
     return showHome(model, session);
   }
 
+
+  @GetMapping("/download")
+  public void download(
+      @RequestParam("fileId") Integer fileId,
+      HttpServletResponse response) {
+    fileService.downloadFile(fileId, response);
+  }
 
 
 

@@ -15,6 +15,7 @@ public interface FileMapper {
   @Select(
       "SELECT "
           + "  f.name, "
+          + "  f.file_id AS fileId, "
           + "  u.name AS userName, "           // 将 user 表的 name 字段映射为 DTO 的 userName
           + "  f.size, "
           + "  f.type, "
@@ -42,5 +43,7 @@ public interface FileMapper {
   int insert(FileInfo fileInfo);
 
   // 你已有的 findByUserId(...) 方法…
-
+  @Select("SELECT file_id AS fileId, name,path "
+      + "FROM file WHERE file_id = #{fileId}")
+  FileInfoResponse selectFileById(@Param("fileId") Integer fileId);
 }

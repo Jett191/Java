@@ -15,6 +15,7 @@ public class FileInfoResponse {
     Double size;
     String type;
     Integer count;
+    String path;
     Instant createdTime;
     Integer deleted;
 }
