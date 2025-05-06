@@ -96,4 +96,19 @@ public class FileImpl implements FileService {
     }
   }
 
+  @Override
+  @Transactional
+  public void deleteFile(Integer fileId) throws IOException {
+    // 可选：先校验一下记录是否存在
+    FileInfoResponse info = fileMapper.selectFileById(fileId);
+    if (info == null) {
+      throw new IOException("未找到要删除的文件记录");
+    }
+    // 更新 deleted 标志
+    int rows = fileMapper.softDeleteById(fileId);
+    if (rows != 1) {
+      throw new IOException("软删除失败，受影响行数：" + rows);
+    }
+  }
+
 }

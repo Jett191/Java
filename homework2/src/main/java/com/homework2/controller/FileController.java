@@ -4,6 +4,7 @@ import com.homework2.dto.FileInfoResponse;
 import com.homework2.service.FileService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -58,7 +59,19 @@ public class FileController {
   }
 
 
-
+  @GetMapping("/delete")
+  public String deleteFile(@RequestParam("fileId") Integer fileId,
+      Model model, HttpSession session) {
+    try {
+      fileService.deleteFile(fileId);
+      model.addAttribute("success", true);
+      model.addAttribute("message", "删除成功！");
+    } catch (IOException e) {
+      model.addAttribute("success", false);
+      model.addAttribute("message", "删除失败：" + e.getMessage());
+    }
+    return showHome(model, session);
+  }
 
 
 }

@@ -54,4 +54,12 @@ public interface FileMapper {
       + " WHERE file_id = #{fileId}")
   int incrementDownloadCount(@Param("fileId") Integer fileId);
 
+  /**
+   * 删除
+   */
+  @Update("UPDATE file "
+      + "   SET deleted = 1 "
+      + " WHERE file_id = #{fileId}")
+  int softDeleteById(@Param("fileId") Integer fileId);
+
 }
