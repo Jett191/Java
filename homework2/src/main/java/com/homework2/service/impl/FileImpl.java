@@ -104,8 +104,9 @@ public class FileImpl implements FileService {
     if (info == null) {
       throw new IOException("未找到要删除的文件记录");
     }
+
     // 更新 deleted 标志
-    int rows = fileMapper.softDeleteById(fileId);
+    int rows = fileMapper.softDeleteById(fileId, Instant.now());
     if (rows != 1) {
       throw new IOException("软删除失败，受影响行数：" + rows);
     }

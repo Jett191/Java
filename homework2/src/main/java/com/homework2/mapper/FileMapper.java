@@ -2,6 +2,7 @@ package com.homework2.mapper;
 
 import com.homework2.dto.FileInfo;
 import com.homework2.dto.FileInfoResponse;
+import java.time.Instant;
 import java.util.List;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -58,8 +59,10 @@ public interface FileMapper {
    * 删除
    */
   @Update("UPDATE file "
-      + "   SET deleted = 1 "
+      + "   SET deleted = 1, deleted_time = #{deletedTime} "
       + " WHERE file_id = #{fileId}")
-  int softDeleteById(@Param("fileId") Integer fileId);
+  int softDeleteById(
+      @Param("fileId") Integer fileId,
+      @Param("deletedTime") Instant deletedTime);
 
 }
