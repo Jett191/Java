@@ -42,7 +42,6 @@ public class FileController {
       model.addAttribute("success", true);
       model.addAttribute("message", "上传成功！");
     } catch (Exception e) {
-      e.printStackTrace();
       model.addAttribute("success", false);
       model.addAttribute("message", "上传失败：" + e.getMessage());
     }
@@ -55,6 +54,7 @@ public class FileController {
       @RequestParam("fileId") Integer fileId,
       HttpServletResponse response) {
     fileService.downloadFile(fileId, response);
+
   }
 
 

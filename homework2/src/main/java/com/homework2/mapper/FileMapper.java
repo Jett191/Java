@@ -16,14 +16,14 @@ public interface FileMapper {
       "SELECT "
           + "  f.name, "
           + "  f.file_id AS fileId, "
-          + "  u.name AS userName, "           // 将 user 表的 name 字段映射为 DTO 的 userName
+          + "  u.name AS userName, "
           + "  f.size, "
           + "  f.type, "
           + "  f.count,"
           + "  f.created_time AS createdTime, "
           + "  f.deleted "
           + "FROM `file` f "
-          + "LEFT JOIN `user` u ON u.user_id = f.user_id "  // 通过 user_id 关联 user 表
+          + "LEFT JOIN `user` u ON u.user_id = f.user_id "
           + "WHERE f.user_id = #{userId} "
           + "  AND f.deleted = 0"
   )
@@ -39,11 +39,19 @@ public interface FileMapper {
           "VALUES " +
           "  (#{fileId}, #{userId}, #{name}, #{path}, #{size}, #{type}, #{createdTime}, #{deleted}, #{count})"
   )
-  // 既然你自己生成 UUID，就不需要自动回填，这里可以去掉 @Options
   int insert(FileInfo fileInfo);
 
-  // 你已有的 findByUserId(...) 方法…
+
   @Select("SELECT file_id AS fileId, name,path "
       + "FROM file WHERE file_id = #{fileId}")
   FileInfoResponse selectFileById(@Param("fileId") Integer fileId);
+
+  /**
+   * 下载成功后，自增下载次数
+   */
+  @Update("UPDATE file "
+      + "   SET `count` = `count` + 1 "
+      + " WHERE file_id = #{fileId}")
+  int incrementDownloadCount(@Param("fileId") Integer fileId);
+
 }

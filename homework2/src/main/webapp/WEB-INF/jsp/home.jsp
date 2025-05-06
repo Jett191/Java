@@ -213,7 +213,13 @@
                     </td>
                     <td>
                         <!-- 下载按钮 -->
-                        <a href="${pageContext.request.contextPath}/file/download?fileId=${file.fileId}">
+                        <c:url var="downloadUrl" value="/file/download">
+                            <c:param name="fileId" value="${file.fileId}"/>
+                        </c:url>
+
+                        <a href="${downloadUrl}"
+                           target="_blank"
+                           onclick="setTimeout(function(){ location.reload() }, 1000)">
                             下载
                         </a>
                         <!-- 删除按钮 -->
@@ -232,6 +238,7 @@
     <c:if test="${empty files}">
         <div class="empty-message">暂无上传文件。</div>
     </c:if>
+
 </div>
 </body>
 </html>

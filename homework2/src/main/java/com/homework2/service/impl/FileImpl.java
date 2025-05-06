@@ -16,6 +16,7 @@ import java.util.UUID;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
@@ -62,6 +63,7 @@ public class FileImpl implements FileService {
   }
 
   @Override
+  @Transactional
   public void downloadFile(Integer fileId, HttpServletResponse response) {
     try {
       // 1. 查询文件信息
