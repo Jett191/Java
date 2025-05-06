@@ -50,6 +50,7 @@ public class UserController {
     }
     model.addAttribute("user", user);
     session.setAttribute("currentUserId",user.getUserId());
+    session.setAttribute("currentUser", user);
     return "redirect:/file/home";
   }
 

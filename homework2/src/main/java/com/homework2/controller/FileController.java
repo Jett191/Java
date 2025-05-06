@@ -1,6 +1,8 @@
 package com.homework2.controller;
 
 import com.homework2.dto.FileInfoResponse;
+import com.homework2.dto.UserLoginInfoResponse;
+import com.homework2.entity.User;
 import com.homework2.service.FileService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -27,6 +29,8 @@ public class FileController {
     Integer userId = (Integer) session.getAttribute("currentUserId");
     List<FileInfoResponse> files = fileService.listFilesByUserId(userId);
     model.addAttribute("files", files);
+    UserLoginInfoResponse user = (UserLoginInfoResponse) session.getAttribute("currentUser");
+    model.addAttribute("user", user);
     return "home";
   }
 
