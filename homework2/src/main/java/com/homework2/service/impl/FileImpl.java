@@ -52,6 +52,8 @@ public class FileImpl implements FileService {
     fileInfo.setType(file.getContentType());
     fileInfo.setCreatedTime(Instant.now());
 
+    userMapper.updateSize(userId, String.valueOf(100.00-size));
+
     fileMapper.insert(fileInfo);
 
     return dest.getAbsolutePath();

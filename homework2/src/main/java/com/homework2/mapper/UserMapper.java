@@ -27,6 +27,9 @@ public interface UserMapper {
   @Update("UPDATE `user` SET path = #{path} WHERE user_id = #{userId}")
   int initPath(@Param("userId") Integer userId, @Param("path") String path);
 
+  @Update("UPDATE `user` SET size = #{size} WHERE user_id = #{userId}")
+  int updateSize(@Param("userId") Integer userId, @Param("size") String size);
+
 
 
 }
