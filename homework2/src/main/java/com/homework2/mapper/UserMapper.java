@@ -30,6 +30,4 @@ public interface UserMapper {
   @Update("UPDATE `user` SET size = #{size} WHERE user_id = #{userId}")
   int updateSize(@Param("userId") Integer userId, @Param("size") String size);
 
-
-
 }
