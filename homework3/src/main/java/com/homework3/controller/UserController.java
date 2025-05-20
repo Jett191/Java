@@ -7,8 +7,6 @@ import com.homework3.entity.Student;
 import com.homework3.service.UserService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,7 +42,6 @@ public class UserController {
     dto.setSex(student.getSex());
     dto.setScore(student.getScore());
     dto.setDeleted(student.getDeleted());
-    dto.setMsg("新增成功");
     return dto;
   }
 
@@ -66,8 +63,7 @@ public class UserController {
         student.getAge(),
         student.getSex(),
         student.getScore(),
-        student.getDeleted(),
-        "更新成功"
+        student.getDeleted()
     );
   }
 

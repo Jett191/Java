@@ -14,5 +14,4 @@ public class StudentDto {
   private String sex;
   private String score;
   private Integer deleted;
-  private String msg;
 }
