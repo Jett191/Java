@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ApiResponse<T> {
 
-  private int code;     // 0 成功，其它失败
-  private String msg;   // 描述
-  private T data;       // 数据
+  private int code;
+  private String msg;
+  private T data;
 
 
   public static <T> ApiResponse<T> ok(T data) {

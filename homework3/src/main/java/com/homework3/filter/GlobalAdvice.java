@@ -14,7 +14,7 @@ public class GlobalAdvice implements ResponseBodyAdvice<Object> {
   @Override
   public boolean supports(MethodParameter returnType,
       Class<? extends HttpMessageConverter<?>> converterType) {
-    return true; // 所有接口都拦
+    return true;
   }
 
   @Override
@@ -23,8 +23,6 @@ public class GlobalAdvice implements ResponseBodyAdvice<Object> {
       Class<? extends HttpMessageConverter<?>> converterType,
       org.springframework.http.server.ServerHttpRequest request,
       org.springframework.http.server.ServerHttpResponse response) {
-
-    // 已经包过就不再处理
     if (body instanceof ApiResponse) {
       return body;
     }
