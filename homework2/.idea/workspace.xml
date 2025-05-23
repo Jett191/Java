@@ -9,514 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e004d9da-bfc9-48a1-88de-d70ec44adab0" name="更改" comment="文件夹初始化切面">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework2/config/UserDirectoryAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework2/config/UserDirectoryAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework2/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework2/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework2/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework2/input/UserLoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework2/dto/UserLoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework2/input/UserRegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework2/dto/UserRegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework2/output/UserLoginInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework2/dto/UserLoginInfoResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework2/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework2/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/homework2/service/impl/UserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/homework2/service/impl/UserImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/bin/clean.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/bin/package.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/bin/run.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/controller/ProcessDefinitionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/controller/TaskController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/domain/DefineProcessVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/domain/DefineVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/domain/RoleVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/domain/UserVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/exception/CustomException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/mapper/MyProcessMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/mapper/MyTaskMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/service/MyTaskService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/service/impl/MyTaskServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/util/ActivitiUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/util/CustomProcessDiagramCanvas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/util/CustomProcessDiagramGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/util/ICustomProcessDiagramGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/util/ProcessImageManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/vo/ActivitiVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/vo/ApplyVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/vo/HistoryVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/vo/MyTaskVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/activiti/vo/ProcessHighlightEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoHiComment/domain/InfoHiComment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoHiComment/mapper/InfoHiCommentMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoHiComment/service/IInfoHiCommentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoHiComment/service/impl/InfoHiCommentServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoQingJia/controller/InfoQingJiaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoQingJia/domain/InfoQingJia.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoQingJia/mapper/InfoQingJiaMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoQingJia/service/IInfoQingJiaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoQingJia/service/impl/InfoQingJiaServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoRunTaskData/domain/InfoRunTaskData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoRunTaskData/mapper/InfoRunTaskDataMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoRunTaskData/service/IInfoRunTaskDataService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/java/com/ruoyi/infoRunTaskData/service/impl/InfoRunTaskDataServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/resources/mapper/InfoHiCommentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/resources/mapper/InfoQingJiaMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/resources/mapper/InfoRunTaskDataMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/resources/mapper/MyTaskMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/resources/mapper/ProcessMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/src/main/resources/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/target/classes/mapper/InfoHiCommentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/target/classes/mapper/InfoQingJiaMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/target/classes/mapper/InfoRunTaskDataMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/target/classes/mapper/MyTaskMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/target/classes/mapper/ProcessMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-activiti/target/classes/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/RuoYiApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/RuoYiServletInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/common/CaptchaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/common/CommonController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/monitor/CacheController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/monitor/ServerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/monitor/SysLogininforController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/monitor/SysOperlogController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/monitor/SysUserOnlineController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysConfigController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysDeptController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysDictDataController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysDictTypeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysIndexController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysLoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysMenuController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysNoticeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysPostController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysProfileController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysRegisterController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysRoleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysUserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/controller/tool/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/java/com/ruoyi/web/core/config/SwaggerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/META-INF/spring-devtools.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/application-druid.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/i18n/messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/i18n/messages_en_US.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/i18n/messages_zh_CN.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/mybatis/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/static/word/111.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/static/word/fztz/clxhtb.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/static/word/htbg/htbg.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/static/word/htbz/htbz1.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/static/word/htbz/htbz2.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/static/word/jdsq/jdsq.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/static/word/lld.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/static/word/proposal.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/static/word/proposal1.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/main/resources/static/word/proposal2.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/src/test/java/com/ruoyi/ProcessRunTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/META-INF/spring-devtools.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/application-druid.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/i18n/messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/i18n/messages_en_US.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/i18n/messages_zh_CN.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/mybatis/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/static/word/111.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/static/word/fztz/clxhtb.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/static/word/htbg/htbg.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/static/word/htbz/htbz1.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/static/word/htbz/htbz2.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/static/word/jdsq/jdsq.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/static/word/lld.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/static/word/proposal.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/static/word/proposal1.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-admin/target/classes/static/word/proposal2.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/annotation/Anonymous.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/annotation/DataScope.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/annotation/DataSource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/annotation/Excel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/annotation/Excels.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/annotation/Log.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/annotation/RateLimiter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/annotation/RepeatSubmit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/annotation/Sensitive.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/config/RuoYiConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/config/serializer/SensitiveJsonSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/constant/ActivitiConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/constant/CacheConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/constant/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/constant/GenConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/constant/HttpStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/constant/ScheduleConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/constant/UserConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/controller/BaseController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/AjaxResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/BaseEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/R.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/TreeEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/TreeSelect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/entity/SysDept.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/entity/SysDictData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/entity/SysDictType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/entity/SysMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/entity/SysRole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/entity/SysUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/model/LoginBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/model/LoginUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/domain/model/RegisterBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/page/PageDomain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/page/TableDataInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/page/TableSupport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/redis/RedisCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/text/CharsetKit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/text/Convert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/core/text/StrFormatter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/echarts/EChartsBt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/enums/BusinessStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/enums/BusinessType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/enums/DataSourceType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/enums/DesensitizedType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/enums/HttpMethod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/enums/LimitType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/enums/OperatorType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/enums/UserStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/DemoModeException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/GlobalException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/ServiceException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/UtilException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/base/BaseException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/file/FileException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/file/FileNameLengthLimitExceededException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/file/FileSizeLimitExceededException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/file/FileUploadException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/file/InvalidExtensionException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/job/TaskException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/user/BlackListException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/user/CaptchaException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/user/CaptchaExpireException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/user/UserException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/user/UserNotExistsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/user/UserPasswordNotMatchException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/exception/user/UserPasswordRetryLimitExceedException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/filter/PropertyPreExcludeFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/filter/RepeatableFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/filter/RepeatedlyRequestWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/filter/XssFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/filter/XssHttpServletRequestWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/Arith.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/DateUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/DesensitizedUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/DictUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/ExceptionUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/LogUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/MessageUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/PageUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/SecurityUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/ServletUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/StringUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/Threads.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/WordUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/bean/BeanUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/bean/BeanValidators.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/file/FileTypeUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/file/FileUploadUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/file/FileUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/file/ImageUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/file/MimeTypeUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/html/EscapeUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/html/HTMLFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/http/HttpHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/http/HttpUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/ip/AddressUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/ip/IpUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/poi/ExcelHandlerAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/poi/ExcelUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/reflect/ReflectUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/sign/Base64.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/sign/Md5Utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/sign/RsaUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/spring/SpringUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/sql/SqlUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/uuid/IdUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/uuid/Seq.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/uuid/SnowflakeIdUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/utils/uuid/UUID.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/word/WordOperation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/xss/Xss.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-common/src/main/java/com/ruoyi/common/xss/XssValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/aspectj/DataScopeAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/aspectj/DataSourceAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/aspectj/LogAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/aspectj/RateLimiterAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/ApplicationConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/CaptchaConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/DruidConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/FastJson2JsonRedisSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/FilterConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/KaptchaTextCreator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/MyBatisConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/RedisConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/ResourcesConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/ServerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/ThreadPoolConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/properties/DruidProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/config/properties/PermitAllUrlProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/datasource/DynamicDataSource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/datasource/DynamicDataSourceContextHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/interceptor/RepeatSubmitInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/interceptor/impl/SameUrlDataInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/manager/AsyncManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/manager/ShutdownManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/manager/factory/AsyncFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/security/context/AuthenticationContextHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/security/context/PermissionContextHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/security/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/security/handle/AuthenticationEntryPointImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/security/handle/LogoutSuccessHandlerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/domain/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/domain/server/Cpu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/domain/server/Jvm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/domain/server/Mem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/domain/server/Sys.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/domain/server/SysFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/exception/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/service/PermissionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/service/SysLoginService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/service/SysPasswordService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/service/SysPermissionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/service/SysRegisterService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/service/TokenService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-framework/src/main/java/com/ruoyi/framework/web/service/UserDetailsServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/config/GenConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/controller/GenController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/domain/GenTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/domain/GenTableColumn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/mapper/GenTableColumnMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/mapper/GenTableMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/service/GenTableColumnServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/service/GenTableServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/service/IGenTableColumnService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/service/IGenTableService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/util/GenUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/util/VelocityInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/java/com/ruoyi/generator/util/VelocityUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/generator.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/mapper/generator/GenTableColumnMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/mapper/generator/GenTableMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/java/controller.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/java/domain.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/java/mapper.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/java/service.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/java/serviceImpl.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/java/sub-domain.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/js/api.js.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/sql/sql.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/vue/index-tree.vue.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/vue/index.vue.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/vue/v3/index-tree.vue.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/vue/v3/index.vue.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/src/main/resources/vm/xml/mapper.xml.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/generator.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/mapper/generator/GenTableColumnMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/mapper/generator/GenTableMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/java/controller.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/java/domain.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/java/mapper.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/java/service.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/java/serviceImpl.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/java/sub-domain.java.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/js/api.js.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/sql/sql.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/vue/index-tree.vue.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/vue/index.vue.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/vue/v3/index-tree.vue.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/vue/v3/index.vue.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-generator/target/classes/vm/xml/mapper.xml.vm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/config/ScheduleConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/controller/SysJobController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/controller/SysJobLogController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/domain/SysJob.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/domain/SysJobLog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/mapper/SysJobLogMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/mapper/SysJobMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/service/ISysJobLogService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/service/ISysJobService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/service/impl/SysJobLogServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/service/impl/SysJobServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/task/RyTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/util/AbstractQuartzJob.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/util/CronUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/util/JobInvokeUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/util/QuartzDisallowConcurrentExecution.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/util/QuartzJobExecution.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/java/com/ruoyi/quartz/util/ScheduleUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/resources/mapper/quartz/SysJobLogMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/src/main/resources/mapper/quartz/SysJobMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/target/classes/mapper/quartz/SysJobLogMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-quartz/target/classes/mapper/quartz/SysJobMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-research-projects.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/disk/controller/DiskFilesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/disk/domain/DiskFiles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/disk/mapper/DiskFilesMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/disk/service/IDiskFilesService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/disk/service/impl/DiskFilesServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysLogininfor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysNotice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysOperLog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysPost.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysRoleDept.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysRoleMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysUserOnline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysUserPost.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysUserRole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/vo/MetaVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/domain/vo/RouterVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysConfigMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysDeptMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysDictDataMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysDictTypeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysLogininforMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysMenuMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysNoticeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysOperLogMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysPostMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysRoleDeptMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysRoleMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysRoleMenuMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysUserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysUserPostMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysUserRoleMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysConfigService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysDeptService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysDictDataService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysDictTypeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysLogininforService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysMenuService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysNoticeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysOperLogService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysPostService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysRoleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysUserOnlineService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysConfigServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysDeptServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysDictDataServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysDictTypeServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysLogininforServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysMenuServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysNoticeServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysOperLogServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysPostServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysRoleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysUserOnlineServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysUserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/disk/DiskFilesMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysConfigMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysDeptMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysDictDataMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysDictTypeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysLogininforMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysMenuMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysNoticeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysOperLogMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysPostMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysRoleDeptMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysRoleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysRoleMenuMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysUserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysUserPostMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/src/main/resources/mapper/system/SysUserRoleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/disk/DiskFilesMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysConfigMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysDeptMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysDictDataMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysDictTypeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysLogininforMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysMenuMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysNoticeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysOperLogMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysPostMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysRoleDeptMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysRoleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysRoleMenuMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysUserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysUserPostMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-system/target/classes/mapper/system/SysUserRoleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-talent-platform.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/controller/CjlrController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/BjCj.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/CjTj.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/Cjlr.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/Gpa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/mapper/CjlrMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/service/ICjlrService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/service/impl/CjlrServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/controller/CjxgspController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/domain/Cjxgsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/mapper/CjxgspMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/service/ICjxgspService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/service/impl/CjxgspServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/controller/XnController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/domain/Xn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/domain/XnKc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/controller/XsjbxxController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/domain/Xsjbxx.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/mapper/XsjbxxMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/service/IXsjbxxService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/service/impl/XsjbxxServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcap/controller/KcapController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcap/domain/Kcap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcap/mapper/KcapMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcap/service/IKcapService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcap/service/impl/KcapServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcpj/controller/KcpjController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcpj/domain/Kcpj.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcpj/mapper/KcpjMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcpj/service/IKcpjService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcpj/service/impl/KcpjServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/controller/KcxxController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Js.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Kcxx.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/KcxxFj.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/mapper/KcxxMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/service/IKcxxService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/service/impl/KcxxServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/mapper/XnMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/service/IXnService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/service/impl/XnServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/resources/mapper/xscj/XnMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/resources/mapper/xscj/cjlr/CjlrMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/resources/mapper/xscj/cjxgsp/CjxgspMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/resources/mapper/xscj/jbxx/XsjbxxMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/resources/mapper/xscj/kcap/KcapMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/resources/mapper/xscj/kcpj/KcpjMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/src/main/resources/mapper/xscj/kcxx/KcxxMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/target/classes/mapper/xscj/XnMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/target/classes/mapper/xscj/cjlr/CjlrMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/target/classes/mapper/xscj/cjxgsp/CjxgspMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/target/classes/mapper/xscj/jbxx/XsjbxxMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/target/classes/mapper/xscj/kcap/KcapMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/target/classes/mapper/xscj/kcpj/KcpjMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ruoyi-xscjxxgl/target/classes/mapper/xscj/kcxx/KcxxMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ry.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/ry.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/tree.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/Student-grades/集成文档.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/ruoyi-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../javaDesign/ruoyi-ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaDesign/studentgrades.sql" beforeDir="false" />
+    <list default="true" id="e004d9da-bfc9-48a1-88de-d70ec44adab0" name="更改" comment="size记录">
+      <change beforePath="$PROJECT_DIR$/../frontend/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -533,7 +30,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -543,7 +40,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Jett191/School.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/Jett191/Java.git&quot;,
     &quot;accountId&quot;: &quot;b9542876-e997-4a53-8638-566eb08e06d7&quot;
   }
 }</component>
@@ -577,7 +74,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Maven.homework2 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.homework2 [compile].executor&quot;: &quot;Run&quot;,
     &quot;Maven.homework2 [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.homework2 [validate].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Tomcat 服务器.Tomcat 10.executor&quot;: &quot;Run&quot;,
@@ -719,6 +218,28 @@
       <workItem from="1745196737346" duration="614000" />
       <workItem from="1745335740094" duration="110000" />
       <workItem from="1745336348862" duration="709000" />
+      <workItem from="1745337117294" duration="4543000" />
+      <workItem from="1745369000633" duration="5949000" />
+      <workItem from="1745913551546" duration="16793000" />
+      <workItem from="1745975224933" duration="1009000" />
+      <workItem from="1745980516320" duration="2021000" />
+      <workItem from="1746272899517" duration="25000" />
+      <workItem from="1746453754840" duration="1075000" />
+      <workItem from="1746507524119" duration="1640000" />
+      <workItem from="1746510583484" duration="181000" />
+      <workItem from="1746510778180" duration="597000" />
+      <workItem from="1746511784783" duration="1270000" />
+      <workItem from="1746535509450" duration="9703000" />
+      <workItem from="1746548427665" duration="544000" />
+      <workItem from="1746577753621" duration="4052000" />
+      <workItem from="1746584509541" duration="556000" />
+      <workItem from="1746685064893" duration="1180000" />
+      <workItem from="1747026992719" duration="485000" />
+      <workItem from="1747050283001" duration="308000" />
+      <workItem from="1747051414705" duration="606000" />
+      <workItem from="1747118186379" duration="22000" />
+      <workItem from="1747191132186" duration="106000" />
+      <workItem from="1747277739006" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="init pom">
       <option name="closed" value="true" />
@@ -776,7 +297,95 @@
       <option name="project" value="LOCAL" />
       <updated>1744865205089</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="登录注册">
+      <option name="closed" value="true" />
+      <created>1745339182381</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745339182381</updated>
+    </task>
+    <task id="LOCAL-00009" summary="文件上传">
+      <option name="closed" value="true" />
+      <created>1745928818013</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1745928818013</updated>
+    </task>
+    <task id="LOCAL-00010" summary="文件上传完成">
+      <option name="closed" value="true" />
+      <created>1745974443477</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1745974443477</updated>
+    </task>
+    <task id="LOCAL-00011" summary="文件展示完成">
+      <option name="closed" value="true" />
+      <created>1746507553171</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746507553171</updated>
+    </task>
+    <task id="LOCAL-00012" summary="文件下载完成">
+      <option name="closed" value="true" />
+      <created>1746543220391</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746543220391</updated>
+    </task>
+    <task id="LOCAL-00013" summary="文件下载完成">
+      <option name="closed" value="true" />
+      <created>1746546263220</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746546263220</updated>
+    </task>
+    <task id="LOCAL-00014" summary="文件删除完成">
+      <option name="closed" value="true" />
+      <created>1746546644100</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746546644100</updated>
+    </task>
+    <task id="LOCAL-00015" summary="小bug修复">
+      <option name="closed" value="true" />
+      <created>1746547482694</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746547482694</updated>
+    </task>
+    <task id="LOCAL-00016" summary="页面美化">
+      <option name="closed" value="true" />
+      <created>1746548398854</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1746548398854</updated>
+    </task>
+    <task id="LOCAL-00017" summary="删除时间记录">
+      <option name="closed" value="true" />
+      <created>1746548962514</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1746548962514</updated>
+    </task>
+    <task id="LOCAL-00018" summary="size记录">
+      <option name="closed" value="true" />
+      <created>1746578979138</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1746578979138</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -788,6 +397,16 @@
     <MESSAGE value="依赖版本冲突修复" />
     <MESSAGE value="登录注册功能" />
     <MESSAGE value="文件夹初始化切面" />
-    <option name="LAST_COMMIT_MESSAGE" value="文件夹初始化切面" />
+    <MESSAGE value="登录注册" />
+    <MESSAGE value="文件上传" />
+    <MESSAGE value="文件上传完成" />
+    <MESSAGE value="文件展示完成" />
+    <MESSAGE value="文件下载完成" />
+    <MESSAGE value="文件删除完成" />
+    <MESSAGE value="小bug修复" />
+    <MESSAGE value="页面美化" />
+    <MESSAGE value="删除时间记录" />
+    <MESSAGE value="size记录" />
+    <option name="LAST_COMMIT_MESSAGE" value="size记录" />
   </component>
 </project>
