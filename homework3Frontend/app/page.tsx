@@ -1,5 +1,7 @@
 'use client'
 import { getStudents } from '@/api/student'
+import { columns } from '@/components/studentColumn'
+import { DataTable } from '@/components/studentDataTable'
 import { StudentList } from '@/types'
 import { useState } from 'react'
 
@@ -8,7 +10,7 @@ function Home() {
   async function getAllStudents() {
     try {
       const data = await getStudents()
-      console.log(data)
+
       setStudents(data.data)
     } catch (error) {
       console.log(error)
@@ -18,11 +20,9 @@ function Home() {
   return (
     <>
       <button onClick={getAllStudents}>测试</button>
-      <ul>
-        {students.map((student, index) => (
-          <li key={index}>{student.name}</li>
-        ))}
-      </ul>
+      <div className='container mx-auto py-10'>
+        <DataTable columns={columns} data={students} />
+      </div>
     </>
   )
 }

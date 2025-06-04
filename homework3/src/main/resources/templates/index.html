@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>员工管理</title>
+  <style>
+    body{
+      margin:20px;
+      background:#f7f7f7;
+      font-family:Arial,Helvetica,sans-serif;
+    }
+    h2{ margin-bottom:10px; }
+    /* 表单 */
+    .toolbar{ margin-bottom:12px; }
+    .toolbar input{ padding:4px 6px; margin-right:10px; }
+    .toolbar button{ padding:4px 10px; cursor:pointer; }
+    /* 表格 */
+    table{ width:100%; border-collapse:collapse; background:#fff; }
+    th,td{ border:1px solid #ccc; padding:8px; text-align:left; }
+    th{ background:#f0f0f0; }
+    button{ margin:0 4px; }
+  </style>
+</head>
+
+<body>
+<h2>员工管理</h2>
+
+<!-- 新增员工表单 -->
+<div class="toolbar">
+  <input id="name"   placeholder="姓名">
+  <input id="age"    type="number" placeholder="年龄"  style="width:80px">
+  <input id="dept"   placeholder="部门">
+  <input id="salary" placeholder="薪资">
+  <button onclick="addEmp()">新增</button>
+</div>
+
+<!-- 员工列表 -->
+<table id="empTable">
+  <thead>
+  <tr>
+    <th>ID</th><th>姓名</th><th>年龄</th><th>部门</th><th>薪资</th><th>操作</th>
+  </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+  /* 后端接口前缀：根据实际映射修改 */
+  const BASE = 'http://localhost:8080/emp';
+  const $ = sel => document.querySelector(sel);
+
+  /* 统一请求封装，自动解析 ApiResponse */
+  function api(url, opts = {}) {
+    return fetch(url, {
+      headers: { 'Content-Type': 'application/json' },
+      ...opts
+    })
+        .then(r => r.json())
+        .then(res => {
+          if (res.code !== 0) { alert(res.msg); throw new Error(res.msg); }
+          return res.data;
+        });
+  }
+
+  /* ---------- 列表 ---------- */
+  function loadEmps() {
+    api(BASE + '/allEmp').then(renderTable);
+  }
+
+  function renderTable(list) {
+    const tbody = $('#empTable tbody');
+    tbody.innerHTML = '';
+    list.forEach(e => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+      <td>${e.empId}</td>
+      <td>${e.name}</td>
+      <td>${e.age ?? ''}</td>
+      <td>${e.dept ?? ''}</td>
+      <td>${e.salary ?? ''}</td>
+      <td>
+        <button onclick="showEdit(${e.empId})">编辑</button>
+        <button onclick="removeEmp(${e.empId})">删除</button>
+      </td>
+    `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  /* ---------- 新增 ---------- */
+  function addEmp() {
+    const data = {
+      name: $('#name').value.trim(),
+      age : Number($('#age').value),
+      dept: $('#dept').value.trim(),
+      salary: $('#salary').value.trim()
+    };
+    if (!data.name) { alert('姓名不能为空'); return; }
+    api(BASE, { method:'POST', body: JSON.stringify(data) })
+        .then(() => { clearForm(); loadEmps(); });
+  }
+  function clearForm() {
+    ['name','age','dept','salary'].forEach(id => $('#'+id).value = '');
+  }
+
+  /* ---------- 删除 ---------- */
+  function removeEmp(id) {
+    if (!confirm('确定删除？')) return;
+    api(`${BASE}/${id}`, { method:'DELETE' })
+        .then(loadEmps);
+  }
+
+  /* ---------- 编辑 ---------- */
+  function showEdit(id) {
+    /* 简单做法：用 prompt 依次输入；项目里可替换成自定义弹窗 */
+    api(BASE + '/allEmp').then(list => {
+      const emp = list.find(e => e.empId === id);
+      if (!emp) return;
+      const name   = prompt('姓名',   emp.name);
+      if (name === null) return;          // 取消
+      const age    = prompt('年龄',  emp.age);
+      const dept   = prompt('部门',   emp.dept);
+      const salary = prompt('薪资', emp.salary);
+      const body = { name, age:Number(age), dept, salary };
+      api(`${BASE}/${id}`, { method:'PUT', body: JSON.stringify(body) })
+          .then(loadEmps);
+    });
+  }
+
+  /* 页面加载后立即拉取列表 */
+  document.addEventListener('DOMContentLoaded', loadEmps);
+</script>
+</body>
+</html>

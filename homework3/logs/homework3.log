@@ -1,48 +1,364 @@
-2025-05-23T18:31:51.790+08:00  INFO 52027 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 52027 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
-2025-05-23T18:31:51.793+08:00  INFO 52027 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
-2025-05-23T18:31:51.815+08:00  INFO 52027 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-23T18:31:51.815+08:00  INFO 52027 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-23T18:31:52.081+08:00  INFO 52027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-05-23T18:31:52.083+08:00  INFO 52027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-05-23T18:31:52.092+08:00  INFO 52027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
-2025-05-23T18:31:52.285+08:00  INFO 52027 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-05-23T18:31:52.291+08:00  INFO 52027 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-23T18:31:52.291+08:00  INFO 52027 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-23T18:31:52.321+08:00  INFO 52027 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-23T18:31:52.321+08:00  INFO 52027 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 506 ms
-2025-05-23T18:31:52.704+08:00  INFO 52027 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-05-23T18:31:52.718+08:00  INFO 52027 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-05-23T18:31:52.724+08:00  INFO 52027 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.141 seconds (process running for 1.471)
-2025-05-23T18:55:54.611+08:00  INFO 52027 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-23T18:55:54.612+08:00  INFO 52027 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-23T18:55:54.614+08:00  INFO 52027 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-05-23T18:55:54.657+08:00  INFO 52027 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-23T18:55:54.829+08:00  INFO 52027 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b3eeacb
-2025-05-23T18:55:54.830+08:00  INFO 52027 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-23T19:09:06.490+08:00  WARN 52027 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m11s491ms).
-2025-05-23T19:22:13.857+08:00  WARN 52027 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m7s365ms).
-2025-05-23T19:22:38.427+08:00  INFO 52027 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-23T19:22:38.431+08:00  INFO 52027 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-23T19:22:38.442+08:00  INFO 52027 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-23T19:22:38.449+08:00  INFO 52027 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-23T19:22:53.621+08:00  INFO 54152 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 54152 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
-2025-05-23T19:22:53.622+08:00  INFO 54152 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
-2025-05-23T19:22:53.641+08:00  INFO 54152 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-23T19:22:53.641+08:00  INFO 54152 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-23T19:22:53.894+08:00  INFO 54152 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-05-23T19:22:53.896+08:00  INFO 54152 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-05-23T19:22:53.904+08:00  INFO 54152 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
-2025-05-23T19:22:54.097+08:00  INFO 54152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-05-23T19:22:54.102+08:00  INFO 54152 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-23T19:22:54.102+08:00  INFO 54152 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-23T19:22:54.118+08:00  INFO 54152 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-23T19:22:54.118+08:00  INFO 54152 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 477 ms
-2025-05-23T19:22:54.456+08:00  INFO 54152 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-05-23T19:22:54.469+08:00  INFO 54152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-05-23T19:22:54.475+08:00  INFO 54152 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.035 seconds (process running for 1.337)
-2025-05-23T19:23:18.070+08:00  INFO 54152 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-23T19:23:18.071+08:00  INFO 54152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-23T19:23:18.072+08:00  INFO 54152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-05-23T19:23:18.107+08:00  INFO 54152 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-23T19:23:18.218+08:00  INFO 54152 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@573df670
-2025-05-23T19:23:18.219+08:00  INFO 54152 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T09:19:36.741+08:00  INFO 26157 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 26157 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T09:19:36.743+08:00  INFO 26157 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T09:19:36.759+08:00  INFO 26157 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T09:19:36.759+08:00  INFO 26157 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T09:19:37.022+08:00  INFO 26157 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T09:19:37.024+08:00  INFO 26157 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T09:19:37.035+08:00  INFO 26157 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-06-04T09:19:37.245+08:00  INFO 26157 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T09:19:37.252+08:00  INFO 26157 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T09:19:37.252+08:00  INFO 26157 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T09:19:37.266+08:00  INFO 26157 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T09:19:37.266+08:00  INFO 26157 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 507 ms
+2025-06-04T09:19:37.601+08:00  INFO 26157 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T09:19:37.614+08:00  INFO 26157 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T09:19:37.619+08:00  INFO 26157 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.095 seconds (process running for 1.508)
+2025-06-04T09:21:19.243+08:00  INFO 26157 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04T09:21:19.244+08:00  INFO 26157 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-04T09:21:19.245+08:00  INFO 26157 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-04T09:21:19.280+08:00  INFO 26157 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T09:21:19.435+08:00  INFO 26157 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d8f3c34
+2025-06-04T09:21:19.435+08:00  INFO 26157 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T09:21:59.091+08:00  INFO 26157 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T09:21:59.095+08:00  INFO 26157 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T09:21:59.102+08:00  INFO 26157 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T09:21:59.105+08:00  INFO 26157 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T09:44:57.277+08:00  INFO 26673 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 26673 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T09:44:57.278+08:00  INFO 26673 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T09:44:57.298+08:00  INFO 26673 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T09:44:57.299+08:00  INFO 26673 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T09:44:57.550+08:00  INFO 26673 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T09:44:57.551+08:00  INFO 26673 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T09:44:57.560+08:00  INFO 26673 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-04T09:44:57.765+08:00  INFO 26673 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T09:44:57.771+08:00  INFO 26673 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T09:44:57.771+08:00  INFO 26673 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T09:44:57.786+08:00  INFO 26673 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T09:44:57.786+08:00  INFO 26673 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 487 ms
+2025-06-04T09:44:58.131+08:00  INFO 26673 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T09:44:58.143+08:00  INFO 26673 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T09:44:58.148+08:00  INFO 26673 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.066 seconds (process running for 1.315)
+2025-06-04T09:46:48.240+08:00  INFO 26673 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04T09:46:48.241+08:00  INFO 26673 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-04T09:46:48.243+08:00  INFO 26673 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-04T09:46:48.314+08:00  INFO 26673 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T09:46:48.691+08:00  INFO 26673 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@262df66f
+2025-06-04T09:46:48.692+08:00  INFO 26673 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T09:47:23.232+08:00  INFO 26673 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-06-04T09:47:23.237+08:00  INFO 26673 --- [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T09:47:23.244+08:00  INFO 26673 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T09:47:23.260+08:00  INFO 26673 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T09:47:23.264+08:00  INFO 26673 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T09:47:23.303+08:00  INFO 26673 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 26673 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T09:47:23.303+08:00  INFO 26673 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T09:47:23.359+08:00  INFO 26673 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T09:47:23.359+08:00  INFO 26673 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T09:47:23.361+08:00  INFO 26673 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2025-06-04T09:47:23.394+08:00  INFO 26673 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T09:47:23.395+08:00  INFO 26673 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T09:47:23.395+08:00  INFO 26673 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T09:47:23.398+08:00  INFO 26673 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T09:47:23.398+08:00  INFO 26673 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 94 ms
+2025-06-04T09:47:23.479+08:00  INFO 26673 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T09:47:23.485+08:00  INFO 26673 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T09:47:23.487+08:00  INFO 26673 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 0.197 seconds (process running for 146.655)
+2025-06-04T09:47:23.488+08:00  INFO 26673 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-04T09:47:27.874+08:00  INFO 26673 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T09:47:27.876+08:00  INFO 26673 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T09:47:29.051+08:00  INFO 26733 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 26733 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T09:47:29.052+08:00  INFO 26733 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T09:47:29.076+08:00  INFO 26733 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T09:47:29.076+08:00  INFO 26733 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T09:47:29.321+08:00  INFO 26733 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T09:47:29.322+08:00  INFO 26733 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T09:47:29.331+08:00  INFO 26733 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-04T09:47:29.527+08:00  INFO 26733 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T09:47:29.533+08:00  INFO 26733 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T09:47:29.533+08:00  INFO 26733 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T09:47:29.547+08:00  INFO 26733 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T09:47:29.547+08:00  INFO 26733 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 470 ms
+2025-06-04T09:47:29.888+08:00  INFO 26733 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T09:47:29.900+08:00  INFO 26733 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T09:47:29.905+08:00  INFO 26733 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.078 seconds (process running for 1.373)
+2025-06-04T09:47:33.779+08:00  INFO 26733 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04T09:47:33.779+08:00  INFO 26733 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-04T09:47:33.780+08:00  INFO 26733 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-04T09:47:33.808+08:00  INFO 26733 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T09:47:33.929+08:00  INFO 26733 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@93c84a
+2025-06-04T09:47:33.930+08:00  INFO 26733 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T09:48:31.241+08:00  INFO 26733 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T09:48:31.244+08:00  INFO 26733 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T09:48:31.256+08:00  INFO 26733 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T09:48:31.259+08:00  INFO 26733 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T10:05:31.957+08:00  INFO 27092 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27092 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:05:31.958+08:00  INFO 27092 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:05:31.978+08:00  INFO 27092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T10:05:31.978+08:00  INFO 27092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T10:05:32.230+08:00  INFO 27092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:05:32.232+08:00  INFO 27092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:05:32.241+08:00  INFO 27092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:05:32.433+08:00  INFO 27092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:05:32.439+08:00  INFO 27092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:05:32.439+08:00  INFO 27092 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:05:32.453+08:00  INFO 27092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:05:32.453+08:00  INFO 27092 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 474 ms
+2025-06-04T10:05:32.765+08:00  INFO 27092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:05:32.777+08:00  INFO 27092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:05:32.782+08:00  INFO 27092 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.0 seconds (process running for 1.232)
+2025-06-04T10:05:57.611+08:00  INFO 27092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04T10:05:57.611+08:00  INFO 27092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-04T10:05:57.613+08:00  INFO 27092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-04T10:05:57.640+08:00  INFO 27092 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T10:05:57.769+08:00  INFO 27092 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10c0d8fe
+2025-06-04T10:05:57.769+08:00  INFO 27092 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T10:06:35.250+08:00  INFO 27092 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:06:35.254+08:00  INFO 27092 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:06:35.264+08:00  INFO 27092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T10:06:35.267+08:00  INFO 27092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T10:06:48.366+08:00  INFO 27128 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27128 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:06:48.367+08:00  INFO 27128 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:06:48.389+08:00  INFO 27128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T10:06:48.389+08:00  INFO 27128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T10:06:48.689+08:00  INFO 27128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:06:48.691+08:00  INFO 27128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:06:48.701+08:00  INFO 27128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:06:48.924+08:00  INFO 27128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:06:48.930+08:00  INFO 27128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:06:48.930+08:00  INFO 27128 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:06:48.946+08:00  INFO 27128 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:06:48.946+08:00  INFO 27128 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 557 ms
+2025-06-04T10:06:49.307+08:00  INFO 27128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:06:49.324+08:00  INFO 27128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:06:49.330+08:00  INFO 27128 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.172 seconds (process running for 1.818)
+2025-06-04T10:06:52.267+08:00  INFO 27128 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04T10:06:52.267+08:00  INFO 27128 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-04T10:06:52.268+08:00  INFO 27128 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-04T10:06:57.138+08:00  INFO 27128 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T10:06:58.214+08:00  INFO 27128 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14866e6f
+2025-06-04T10:06:58.220+08:00  INFO 27128 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T10:07:02.624+08:00  INFO 27128 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:07:02.628+08:00  INFO 27128 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:07:02.637+08:00  INFO 27128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T10:07:02.662+08:00  INFO 27128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T10:09:40.653+08:00  INFO 27146 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27146 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:09:40.654+08:00  INFO 27146 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:09:40.674+08:00  INFO 27146 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T10:09:40.674+08:00  INFO 27146 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T10:09:40.925+08:00  INFO 27146 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:09:40.926+08:00  INFO 27146 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:09:40.936+08:00  INFO 27146 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:09:41.130+08:00  INFO 27146 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:09:41.135+08:00  INFO 27146 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:09:41.136+08:00  INFO 27146 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:09:41.150+08:00  INFO 27146 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:09:41.150+08:00  INFO 27146 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 475 ms
+2025-06-04T10:09:41.477+08:00  INFO 27146 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:09:41.489+08:00  INFO 27146 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:09:41.494+08:00  INFO 27146 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.023 seconds (process running for 1.295)
+2025-06-04T10:09:44.513+08:00  INFO 27146 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04T10:09:44.514+08:00  INFO 27146 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-04T10:09:44.515+08:00  INFO 27146 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-04T10:09:44.537+08:00  INFO 27146 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T10:09:44.663+08:00  INFO 27146 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40c3272a
+2025-06-04T10:09:44.664+08:00  INFO 27146 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T10:09:50.627+08:00  INFO 27146 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:09:50.630+08:00  INFO 27146 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:09:50.640+08:00  INFO 27146 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T10:09:50.643+08:00  INFO 27146 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T10:10:37.933+08:00  INFO 27173 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27173 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:10:37.934+08:00  INFO 27173 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:10:37.955+08:00  INFO 27173 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T10:10:37.955+08:00  INFO 27173 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T10:10:38.214+08:00  INFO 27173 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:10:38.215+08:00  INFO 27173 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:10:38.224+08:00  INFO 27173 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:10:38.415+08:00  INFO 27173 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:10:38.421+08:00  INFO 27173 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:10:38.421+08:00  INFO 27173 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:10:38.436+08:00  INFO 27173 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:10:38.436+08:00  INFO 27173 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 480 ms
+2025-06-04T10:10:38.740+08:00  INFO 27173 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:10:38.752+08:00  INFO 27173 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:10:38.757+08:00  INFO 27173 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.003 seconds (process running for 1.232)
+2025-06-04T10:10:42.632+08:00  INFO 27173 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04T10:10:42.632+08:00  INFO 27173 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-04T10:10:42.633+08:00  INFO 27173 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-04T10:10:42.656+08:00  INFO 27173 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T10:10:42.783+08:00  INFO 27173 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40682ad9
+2025-06-04T10:10:42.784+08:00  INFO 27173 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T10:11:02.531+08:00  INFO 27173 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:11:02.534+08:00  INFO 27173 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:11:02.545+08:00  INFO 27173 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T10:11:02.548+08:00  INFO 27173 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T10:30:34.881+08:00  INFO 27361 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27361 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:30:34.882+08:00  INFO 27361 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:30:34.901+08:00  INFO 27361 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T10:30:34.902+08:00  INFO 27361 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T10:30:35.153+08:00  INFO 27361 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:30:35.154+08:00  INFO 27361 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:30:35.164+08:00  INFO 27361 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:30:35.361+08:00  INFO 27361 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:30:35.367+08:00  INFO 27361 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:30:35.367+08:00  INFO 27361 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:30:35.384+08:00  INFO 27361 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:30:35.384+08:00  INFO 27361 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 482 ms
+2025-06-04T10:30:35.696+08:00  INFO 27361 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:30:35.709+08:00  INFO 27361 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:30:35.714+08:00  INFO 27361 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.025 seconds (process running for 1.26)
+2025-06-04T10:31:29.030+08:00  INFO 27361 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:31:29.036+08:00  INFO 27361 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:38:05.603+08:00  INFO 27467 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27467 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:38:05.604+08:00  INFO 27467 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:38:05.626+08:00  INFO 27467 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T10:38:05.626+08:00  INFO 27467 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T10:38:05.892+08:00  INFO 27467 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:38:05.893+08:00  INFO 27467 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:38:05.903+08:00  INFO 27467 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:38:06.098+08:00  INFO 27467 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:38:06.104+08:00  INFO 27467 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:38:06.104+08:00  INFO 27467 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:38:06.120+08:00  INFO 27467 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:38:06.121+08:00  INFO 27467 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 495 ms
+2025-06-04T10:38:06.513+08:00  INFO 27467 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:38:06.527+08:00  INFO 27467 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:38:06.533+08:00  INFO 27467 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.108 seconds (process running for 1.368)
+2025-06-04T10:38:09.790+08:00  INFO 27467 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04T10:38:09.791+08:00  INFO 27467 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-04T10:38:09.792+08:00  INFO 27467 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-04T10:40:03.040+08:00  INFO 27467 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-06-04T10:40:03.043+08:00  INFO 27467 --- [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:40:03.046+08:00  INFO 27467 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:40:03.101+08:00  INFO 27467 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27467 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:40:03.102+08:00  INFO 27467 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:40:03.187+08:00  INFO 27467 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:40:03.187+08:00  INFO 27467 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:40:03.190+08:00  INFO 27467 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:40:03.234+08:00  INFO 27467 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:40:03.234+08:00  INFO 27467 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:40:03.235+08:00  INFO 27467 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:40:03.239+08:00  INFO 27467 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:40:03.239+08:00  INFO 27467 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 136 ms
+2025-06-04T10:40:03.370+08:00  INFO 27467 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:40:03.378+08:00  INFO 27467 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:40:03.380+08:00  INFO 27467 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 0.292 seconds (process running for 118.215)
+2025-06-04T10:40:03.381+08:00  INFO 27467 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-04T10:40:11.475+08:00  INFO 27467 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:40:11.477+08:00  INFO 27467 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:40:13.727+08:00  INFO 27527 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27527 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:40:13.728+08:00  INFO 27527 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:40:13.747+08:00  INFO 27527 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T10:40:13.747+08:00  INFO 27527 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T10:40:13.983+08:00  INFO 27527 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:40:13.984+08:00  INFO 27527 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:40:13.994+08:00  INFO 27527 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:40:14.200+08:00  INFO 27527 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:40:14.205+08:00  INFO 27527 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:40:14.205+08:00  INFO 27527 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:40:14.219+08:00  INFO 27527 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:40:14.219+08:00  INFO 27527 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 472 ms
+2025-06-04T10:40:14.516+08:00  INFO 27527 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:40:14.528+08:00  INFO 27527 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:40:14.533+08:00  INFO 27527 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 0.995 seconds (process running for 1.223)
+2025-06-04T10:40:34.525+08:00  INFO 27527 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-06-04T10:40:34.535+08:00  INFO 27527 --- [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:40:34.546+08:00  INFO 27527 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:40:34.600+08:00  INFO 27527 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27527 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:40:34.600+08:00  INFO 27527 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:40:34.659+08:00  INFO 27527 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:40:34.659+08:00  INFO 27527 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:40:34.660+08:00  INFO 27527 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:40:34.693+08:00  INFO 27527 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:40:34.693+08:00  INFO 27527 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:40:34.693+08:00  INFO 27527 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:40:34.696+08:00  INFO 27527 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:40:34.696+08:00  INFO 27527 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 95 ms
+2025-06-04T10:40:34.766+08:00  INFO 27527 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:40:34.771+08:00  INFO 27527 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:40:34.774+08:00  INFO 27527 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 0.187 seconds (process running for 21.464)
+2025-06-04T10:40:34.775+08:00  INFO 27527 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-04T10:40:36.583+08:00  INFO 27527 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04T10:40:36.584+08:00  INFO 27527 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-04T10:40:36.585+08:00  INFO 27527 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-04T10:40:36.625+08:00  INFO 27527 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T10:40:36.750+08:00  INFO 27527 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ba294b6
+2025-06-04T10:40:36.751+08:00  INFO 27527 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T10:45:52.249+08:00  INFO 27527 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:45:52.252+08:00  INFO 27527 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:45:52.262+08:00  INFO 27527 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T10:45:52.269+08:00  INFO 27527 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T10:46:00.185+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27605 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:46:00.186+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:46:00.203+08:00  INFO 27605 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04T10:46:00.204+08:00  INFO 27605 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04T10:46:00.447+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:46:00.448+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:46:00.458+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:46:00.667+08:00  INFO 27605 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:46:00.672+08:00  INFO 27605 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:46:00.672+08:00  INFO 27605 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:46:00.685+08:00  INFO 27605 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:46:00.685+08:00  INFO 27605 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 481 ms
+2025-06-04T10:46:01.009+08:00  INFO 27605 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:46:01.021+08:00  INFO 27605 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:46:01.026+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 1.022 seconds (process running for 1.251)
+2025-06-04T10:46:04.058+08:00  INFO 27605 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04T10:46:04.058+08:00  INFO 27605 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-04T10:46:04.059+08:00  INFO 27605 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-04T10:46:04.090+08:00  INFO 27605 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04T10:46:04.243+08:00  INFO 27605 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@210ff041
+2025-06-04T10:46:04.243+08:00  INFO 27605 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04T10:46:40.791+08:00  INFO 27605 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-06-04T10:46:40.798+08:00  INFO 27605 --- [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:46:40.806+08:00  INFO 27605 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:46:40.825+08:00  INFO 27605 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T10:46:40.830+08:00  INFO 27605 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04T10:46:40.869+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27605 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:46:40.869+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:46:40.925+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:46:40.925+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:46:40.926+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:46:40.959+08:00  INFO 27605 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:46:40.960+08:00  INFO 27605 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:46:40.960+08:00  INFO 27605 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:46:40.963+08:00  INFO 27605 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:46:40.963+08:00  INFO 27605 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 93 ms
+2025-06-04T10:46:41.038+08:00  INFO 27605 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:46:41.044+08:00  INFO 27605 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:46:41.046+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 0.191 seconds (process running for 41.27)
+2025-06-04T10:46:41.046+08:00  INFO 27605 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-04T10:48:54.673+08:00  INFO 27605 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-06-04T10:48:54.675+08:00  INFO 27605 --- [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:48:54.677+08:00  INFO 27605 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:48:54.717+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27605 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:48:54.717+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:48:54.774+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:48:54.775+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:48:54.776+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:48:54.807+08:00  INFO 27605 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:48:54.807+08:00  INFO 27605 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:48:54.807+08:00  INFO 27605 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:48:54.811+08:00  INFO 27605 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:48:54.811+08:00  INFO 27605 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 93 ms
+2025-06-04T10:48:54.879+08:00  INFO 27605 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:48:54.884+08:00  INFO 27605 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:48:54.887+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 0.182 seconds (process running for 175.112)
+2025-06-04T10:48:54.887+08:00  INFO 27605 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-04T10:48:56.300+08:00  INFO 27605 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-06-04T10:48:56.303+08:00  INFO 27605 --- [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:48:56.308+08:00  INFO 27605 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-04T10:48:56.359+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : Starting Homework3Application using Java 17.0.15 with PID 27605 (/Users/jett/code/school/java/homework3/target/classes started by jett in /Users/jett/code/school/java/homework3)
+2025-06-04T10:48:56.359+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : No active profile set, falling back to 1 default profile: "default"
+2025-06-04T10:48:56.403+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-04T10:48:56.404+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-04T10:48:56.405+08:00  INFO 27605 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2025-06-04T10:48:56.430+08:00  INFO 27605 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-04T10:48:56.430+08:00  INFO 27605 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04T10:48:56.431+08:00  INFO 27605 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04T10:48:56.433+08:00  INFO 27605 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04T10:48:56.433+08:00  INFO 27605 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 73 ms
+2025-06-04T10:48:56.494+08:00  INFO 27605 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04T10:48:56.499+08:00  INFO 27605 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-04T10:48:56.501+08:00  INFO 27605 --- [restartedMain] com.homework3.Homework3Application       : Started Homework3Application in 0.156 seconds (process running for 176.726)
+2025-06-04T10:48:56.501+08:00  INFO 27605 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-04T10:53:23.116+08:00  INFO 27605 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04T10:53:23.121+08:00  INFO 27605 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
