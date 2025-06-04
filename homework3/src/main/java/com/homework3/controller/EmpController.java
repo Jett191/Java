@@ -29,7 +29,7 @@ public class EmpController {
     return empService.createEmp(emp);
   }
 
-  /** === 修改员工 === */
+
   @PutMapping("/{id}")
   public Boolean editEmp(@PathVariable Integer id,
       @RequestBody Emp emp) {
@@ -37,7 +37,7 @@ public class EmpController {
     return empService.updateEmp(emp);
   }
 
-  /** === 逻辑删除员工 === */
+
   @DeleteMapping("/{id}")
   public Boolean removeEmp(@PathVariable Integer id) {
     return empService.deleteEmp(id);

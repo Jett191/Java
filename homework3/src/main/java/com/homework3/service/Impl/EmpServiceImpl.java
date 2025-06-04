@@ -35,7 +35,7 @@ public class EmpServiceImpl implements EmpService {
       log.error("新增员工失败：{}", emp);
       throw new RuntimeException("新增员工失败，请稍后再试");
     }
-    return emp;   // empId 已被 MyBatis 回填
+    return emp;
   }
 
 
@@ -80,7 +80,7 @@ public class EmpServiceImpl implements EmpService {
     return true;
   }
 
-  /* ===== 私有校验方法 ===== */
+
   private void validateForInsert(Emp emp) {
     if (emp == null)                    throw new IllegalArgumentException("参数不能为空");
     if (!StringUtils.hasText(emp.getName()))   throw new IllegalArgumentException("姓名不能为空");
